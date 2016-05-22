@@ -38,6 +38,5 @@ public class Criatura extends ElementoEnElCampo {
     // metodo que resta la vida de la criatura cuando recibe un ataque
     
     }
-    //wena cabros
 
 }
