@@ -14,6 +14,12 @@ public class JefeDeTerreno extends ElementoEnElCampo {
     private int vida;
     private String poder;
     
+    //constructores:
+    public JefeDeTerreno(int vida, String poder, int posicion){
+        this.vida = vida;
+        this.poder = poder;
+    }
+    
     public int getVida(){
         return vida;
     }

@@ -11,6 +11,7 @@ package modelos;
  */
 public class Espacio {
     
+    //quizas es booleano :3
     private int espacioDisponible;
     private int espacioNoDisponible;
     

@@ -17,6 +17,11 @@ public class Criatura extends ElementoEnElCampo {
     private int nivel;
     private String nombre;
     
+    //metodos set de vida
+    public void setVida(int vida){ //reemplaza vida luego de ataque
+        this.vida = vida;
+    }
+    
     public int getAtk(){ 
         return atk;
     }
