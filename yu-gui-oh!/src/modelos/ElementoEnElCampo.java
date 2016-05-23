@@ -10,7 +10,7 @@ package modelos;
  * @author franc
  */
 public class ElementoEnElCampo {
-    
+    //posicion en matrices
     private int posicion;
    
 }
