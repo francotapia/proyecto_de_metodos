@@ -10,11 +10,12 @@ package modelos;
  * @author franc
  */
 public class Jugador {
-    
+   
+//Atributos de la clase Jugador
     private String usuario;
     private String contraseña;
     
-    //metodos
+    //metodos de la clase Jugadpr
     
     public String getUsuario(){
         return usuario;
@@ -32,3 +33,7 @@ public class Jugador {
     
     
 }
+
+    
+    
+
