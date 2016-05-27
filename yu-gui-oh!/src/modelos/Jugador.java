@@ -16,7 +16,10 @@ public class Jugador {
     private String contraseña;
     
     //metodos de la clase Jugadpr
-    
+    public Jugador(){
+        this.usuario = null;
+        this.contraseña = null;
+    }
     public String getUsuario(){
         return usuario;
     }
@@ -28,6 +31,17 @@ public class Jugador {
     }
     public String setContraseña(String contraseña){
         return this.contraseña = contraseña;
+    }
+        public boolean ingresar (String usuario, String contraseña){
+        //Condición para reconocer si el usuario y contraseña son correctos
+        if(usuario.equals("antonio") && contraseña.equals("andres")){
+            return true;
+            
+        }else{
+            return false;
+        }
+
+
     }
     
     

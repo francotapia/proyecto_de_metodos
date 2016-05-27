@@ -7,6 +7,7 @@ package vistas;
 
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -173,6 +174,17 @@ public class vistaLogin extends javax.swing.JFrame {
      public void agregarListener(ActionListener al){
         this.ingresarBT.addActionListener(al);
         this.registroBT.addActionListener(al);
+    }
+    private void alerta(String s){
+        JOptionPane.showMessageDialog(null,s); 
+        this.dispose();
+    }
+    public void Bienvenida(String usuario){
+        alerta("bienvenido " + usuario);   
+    }
+    public void Error(){
+        alerta("error...");
+        
     }
      
 }
