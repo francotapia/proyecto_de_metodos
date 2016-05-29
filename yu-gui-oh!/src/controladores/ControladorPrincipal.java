@@ -28,7 +28,7 @@ public class ControladorPrincipal implements ActionListener{
         // TODO code application logic here
         ControladorPrincipal cp = new ControladorPrincipal();
         cp.contLogin = new ControladorLogin();
-        cp.jug = new Jugador();
+        cp.jug = new Jugador("antonio", "andres");
         cp.vl = new vistaLogin();
         cp.vl.setVisible(true);
         cp.vl.agregarListener(cp);
@@ -45,12 +45,17 @@ public class ControladorPrincipal implements ActionListener{
          }    
     }
     private void verificar(String usuario,String contraseña ){
-        if(jug.ingresar(usuario, contraseña)){
-           vl.Bienvenida(usuario);
+        if(jug.existe(usuario)){
             
+            if(jug.ingresar(usuario, contraseña)){
+                vl.bienvenida(usuario);
+                
+            }else{
+                vl.errorContraseña(usuario);
+            }
+        
         }else{
-            vl.Error();
+            vl.errorUsuario(usuario);
         }
-         
-     }
+    }
 }

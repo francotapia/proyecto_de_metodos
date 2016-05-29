@@ -179,14 +179,15 @@ public class vistaLogin extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null,s); 
         this.dispose();
     }
-    public void Bienvenida(String usuario){
-        alerta("bienvenido " + usuario);   
+    public void bienvenida(String usuario){
+        alerta("Bienvenido " + usuario);   
     }
-    public void Error(){
-        alerta("error...");
+    public void errorUsuario(String usuario){
+        alerta("Error: El usuario " + usuario + " no esta registrado");
         
     }
-     
+    public void errorContraseña(String usuario){
+        alerta("Error: La contraseña no coincide");
+        
+    }    
 }
-
-
