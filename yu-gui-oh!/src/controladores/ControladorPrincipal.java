@@ -7,6 +7,7 @@ package controladores;
 
 import modelos.Jugador;
 import vistas.vistaLogin;
+import vistas.vistaRegistro;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -18,6 +19,7 @@ import javax.swing.JButton;
 public class ControladorPrincipal implements ActionListener{
     
     vistaLogin vl;
+    vistaRegistro vr;
     ControladorLogin contLogin;
     Jugador jug;
 
@@ -32,6 +34,9 @@ public class ControladorPrincipal implements ActionListener{
         cp.vl = new vistaLogin();
         cp.vl.setVisible(true);
         cp.vl.agregarListener(cp);
+        cp.vr = new vistaRegistro();
+        cp.vr.setVisible(false);
+        cp.vr.agregarListener(cp);
         
     }
     @Override
@@ -40,9 +45,12 @@ public class ControladorPrincipal implements ActionListener{
              this.vl.setVisible(false);
              String usuario = vl.getUsuario();
              String contraseña = vl.getContraseña();
-             verificar(usuario,contraseña);
-             
-         }    
+             verificar(usuario,contraseña);    
+         } 
+          if(vl.getBoton2() == (JButton)e.getSource()){
+              this.vl.setVisible(false);
+              this.vr.setVisible(true);
+          }
     }
     private void verificar(String usuario,String contraseña ){
         if(jug.existe(usuario)){
