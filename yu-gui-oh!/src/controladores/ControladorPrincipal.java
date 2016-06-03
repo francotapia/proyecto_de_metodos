@@ -8,6 +8,9 @@ package controladores;
 import modelos.Jugador;
 import vistas.vistaLogin;
 import vistas.vistaRegistro;
+import vistas.vistaMenu;
+import vistas.vistaPerfil;
+import vistas.vistaBatalla;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -20,6 +23,9 @@ public class ControladorPrincipal implements ActionListener{
     
     vistaLogin vl;
     vistaRegistro vr;
+    vistaMenu vm;
+    vistaPerfil vp;
+    vistaBatalla vb;
     ControladorLogin contLogin;
     Jugador jug;
 
@@ -37,6 +43,15 @@ public class ControladorPrincipal implements ActionListener{
         cp.vr = new vistaRegistro();
         cp.vr.setVisible(false);
         cp.vr.agregarListener(cp);
+        cp.vm = new vistaMenu();
+        cp.vm.setVisible(false);
+        cp.vm.agregarListener(cp);
+        cp.vp = new vistaPerfil();
+        cp.vp.setVisible(false);
+        cp.vp.agregarListener(cp);
+        cp.vb = new vistaBatalla();
+        cp.vb.setVisible(false);
+        cp.vb.agregarListener(cp);
         
     }
     @Override
@@ -50,6 +65,22 @@ public class ControladorPrincipal implements ActionListener{
           if(vl.getBoton2() == (JButton)e.getSource()){
               this.vl.setVisible(false);
               this.vr.setVisible(true);
+          }
+          if(vr.getBoton() == (JButton)e.getSource()){
+              this.vr.setVisible(false);
+              this.vm.setVisible(true);
+          }
+          if(vm.getBoton2() == (JButton)e.getSource()){
+              this.vm.setVisible(false);
+              this.vb.setVisible(true);
+          }
+          if(vm.getBoton1() == (JButton)e.getSource()){
+              this.vm.setVisible(false);
+              this.vp.setVisible(true);
+          }
+          if(vp.getBoton2() == (JButton)e.getSource()){
+              this.vp.setVisible(false);
+              this.vm.setVisible(true);
           }
     }
     private void verificar(String usuario,String contraseña ){

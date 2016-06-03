@@ -6,39 +6,31 @@
 package controladores;
 
 import java.awt.event.ActionEvent;
-import modelos.Jugador;
-import vistas.vistaLogin;
+import vistas.vistaMenu;
 import java.awt.event.ActionListener;
 
 /**
  *
  * @author franc
  */
-public class ControladorLogin implements ActionListener{
+public class ControladorMenu implements ActionListener{
     
-    private vistaLogin vl;
-    private Jugador ingresar;
+    private vistaMenu vm;
     private ControladorPrincipal cp;
-     //Se escucha a la vistaLogin
-    public vistaLogin getvistaLogin(){
-        return this.vl;
+    
+    public vistaMenu getvistaMenu(){
+        return this.vm;
     }
-    public ControladorLogin(){
-        this.ingresar = new Jugador();
-    }    
-
-    public void verVista(ControladorPrincipal cp){
+     public void verVista (ControladorPrincipal cp){
         this.cp = cp;
-        this.vl = new vistaLogin();
-        this.vl.setVisible(true);
-        this.vl.agregarListener(this);
-        
-    }
-
-
+        this.vm = new vistaMenu();
+        this.vm.setVisible(true);
+        this.vm.agregarListener(this);
+     }
 
     @Override
     public void actionPerformed(ActionEvent ae) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
 }

@@ -6,36 +6,27 @@
 package controladores;
 
 import java.awt.event.ActionEvent;
-import modelos.Jugador;
-import vistas.vistaLogin;
+import vistas.vistaBatalla;
 import java.awt.event.ActionListener;
 
 /**
  *
  * @author franc
  */
-public class ControladorLogin implements ActionListener{
+public class ControladorBatalla implements ActionListener{
     
-    private vistaLogin vl;
-    private Jugador ingresar;
+    private vistaBatalla vb;
     private ControladorPrincipal cp;
-     //Se escucha a la vistaLogin
-    public vistaLogin getvistaLogin(){
-        return this.vl;
+    
+    public vistaBatalla getvistaBatalla(){
+        return this.vb;
     }
-    public ControladorLogin(){
-        this.ingresar = new Jugador();
-    }    
-
-    public void verVista(ControladorPrincipal cp){
+    public void verVista (ControladorPrincipal cp){
         this.cp = cp;
-        this.vl = new vistaLogin();
-        this.vl.setVisible(true);
-        this.vl.agregarListener(this);
-        
+        this.vb = new vistaBatalla();
+        this.vb.setVisible(true);
+     
     }
-
-
 
     @Override
     public void actionPerformed(ActionEvent ae) {
