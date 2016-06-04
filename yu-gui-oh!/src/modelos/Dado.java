@@ -17,6 +17,7 @@ public class Dado {
     private int camino; //tipos de caminos que se habilitan, como matrices.
     private String nombreCriatura;
     private int numeroDeCara;
+    private ImagenesResultados img;
     
     //contructores para objeto dado:
     public Dado (int Caras, String cara, int camino, String nombreCriatura){
@@ -24,12 +25,7 @@ public class Dado {
         this.cara = cara;
         this.camino = camino;
         this.nombreCriatura = nombreCriatura;
-    }
-
-    public Dado() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+    }    
     public int lanzarDado(){
         Random rGenerador = new Random();
         numeroDeCara = rGenerador.nextInt(6)+1;
@@ -39,24 +35,11 @@ public class Dado {
     //metodo que obtiene una cara del dado al azar.
     
     }
-
-    
 }
-class ImagenesResulados{
+class ImagenesResultados{
     public ImageIcon imagenDado;
     public ImageIcon pngDadoR(int DadoR){
-        switch(DadoR){
-            case 1:
-                imagenDado = new ImageIcon(ataque.png); break; //aqui deberia accederse a la imagen ataque en paquete Imagenes
-            case 2:
-                imagenDado = new ImageIcon(invocacion.png); break;
-            case 3:
-                imagenDado = new ImageIcon(magia.png); break;
-            case 4:
-                imagenDado = new ImageIcon(movimiento.png); break;
-            case 5:
-                imagenDado = new ImageIcon (trampa.png); break;
-        }
+        imagenDado = new ImageIcon("carasDados/"+Integer.toString(DadoR)+".png"); 
         return imagenDado;
     }
 }
