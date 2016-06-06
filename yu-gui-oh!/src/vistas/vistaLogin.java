@@ -180,7 +180,7 @@ public class vistaLogin extends javax.swing.JFrame {
         this.dispose();
     }
     public void bienvenida(String usuario){
-        alerta("Bienvenido " + usuario);   
+        alerta("Bienvenido " + usuario);
     }
     public void errorUsuario(String usuario){
         alerta("Error: El usuario " + usuario + " no esta registrado");

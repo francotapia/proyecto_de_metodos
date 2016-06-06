@@ -88,6 +88,8 @@ public class ControladorPrincipal implements ActionListener{
             
             if(jug.ingresar(usuario, contraseña)){
                 vl.bienvenida(usuario);
+                this.vl.setVisible(false);
+                this.vm.setVisible(true);
                 
             }else{
                 vl.errorContraseña(usuario);
