@@ -6,6 +6,7 @@
 package controladores;
 
 import modelos.Jugador;
+import modelos.Dado;
 import vistas.vistaLogin;
 import vistas.vistaRegistro;
 import vistas.vistaMenu;
@@ -13,7 +14,9 @@ import vistas.vistaPerfil;
 import vistas.vistaBatalla;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 
 /**
  *
@@ -81,6 +84,15 @@ public class ControladorPrincipal implements ActionListener{
           if(vp.getBoton2() == (JButton)e.getSource()){
               this.vp.setVisible(false);
               this.vm.setVisible(true);
+          }
+          //Cambio de imagen del dado con su resultado.
+          if(vb.getBoton1() == (JButton)e.getSource()){
+              Dado Dado1 = new Dado();
+              int num1 = Dado1.lanzarDado();
+              String nom1 = Dado1.cara(num1);
+              ImageIcon objImag1 = Dado1.ImagenesResultados(num1);
+              vb.getImagen1().setIcon(objImag1);
+              vb.setResultado(nom1);
           }
     }
     private void verificar(String usuario,String contraseña ){

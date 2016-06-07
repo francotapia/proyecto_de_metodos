@@ -17,7 +17,8 @@ public class Dado {
     private int camino; //tipos de caminos que se habilitan, como matrices.
     private String nombreCriatura;
     private int numeroDeCara;
-    private ImagenesResultados img;
+    private ImageIcon imagenDado;
+    
     
     //contructores para objeto dado:
     public Dado (int Caras, String cara, int camino, String nombreCriatura){
@@ -25,21 +26,40 @@ public class Dado {
         this.cara = cara;
         this.camino = camino;
         this.nombreCriatura = nombreCriatura;
-    }    
+    } 
+    public Dado(){}
+    
     public int lanzarDado(){
         Random rGenerador = new Random();
-        numeroDeCara = rGenerador.nextInt(6)+1;
-                
+        numeroDeCara = rGenerador.nextInt(6)+1;    
         return numeroDeCara;
         
     //metodo que obtiene una cara del dado al azar.
-    
     }
-}
-class ImagenesResultados{
-    public ImageIcon imagenDado;
-    public ImageIcon pngDadoR(int DadoR){
-        imagenDado = new ImageIcon("carasDados/"+Integer.toString(DadoR)+".png"); 
+    public String cara(int numero){
+        if(numero == 1){
+            this.cara = "magia";
+        }
+        if(numero == 2){
+            this.cara = "movimiento";
+        }
+        if(numero == 3){
+            this.cara = "invocacion";
+        }
+        if(numero == 4){
+            this.cara = "trampa";
+        }
+        if(numero == 5){
+            this.cara = "ataque";
+        }
+        return cara;
+    // metodo que dice a que corresponde la cara que se obtuvo al azar.
+    }
+
+    public ImageIcon ImagenesResultados(int DadoR){
+        
+        imagenDado = new ImageIcon("Imagenes.carasDados/"+Integer.toString(DadoR)+".png"); 
         return imagenDado;
+    
     }
 }
