@@ -57,8 +57,8 @@ public class Dado {
     }
 
     public ImageIcon ImagenesResultados(int DadoR){
-        
-        imagenDado = new ImageIcon("Imagenes.carasDados/"+Integer.toString(DadoR)+".png"); 
+        System.out.println(DadoR);
+        imagenDado = new ImageIcon("Imagenes/carasDados/"+Integer.toString(DadoR)+".png"); 
         return imagenDado;
     
     }

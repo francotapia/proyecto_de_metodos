@@ -33,28 +33,27 @@ public class ControladorPrincipal implements ActionListener{
     Jugador jug;
 
     /**
-     * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public ControladorPrincipal() {
         // TODO code application logic here
-        ControladorPrincipal cp = new ControladorPrincipal();
-        cp.contLogin = new ControladorLogin();
-        cp.jug = new Jugador("antonio", "andres");
-        cp.vl = new vistaLogin();
-        cp.vl.setVisible(true);
-        cp.vl.agregarListener(cp);
-        cp.vr = new vistaRegistro();
-        cp.vr.setVisible(false);
-        cp.vr.agregarListener(cp);
-        cp.vm = new vistaMenu();
-        cp.vm.setVisible(false);
-        cp.vm.agregarListener(cp);
-        cp.vp = new vistaPerfil();
-        cp.vp.setVisible(false);
-        cp.vp.agregarListener(cp);
-        cp.vb = new vistaBatalla();
-        cp.vb.setVisible(false);
-        cp.vb.agregarListener(cp);
+        
+        this.contLogin = new ControladorLogin();
+        this.jug = new Jugador("antonio", "andres");
+        this.vl = new vistaLogin();
+        this.vl.setVisible(true);
+        this.vl.agregarListener(this);
+        this.vr = new vistaRegistro();
+        this.vr.setVisible(false);
+        this.vr.agregarListener(this);
+        this.vm = new vistaMenu();
+        this.vm.setVisible(false);
+        this.vm.agregarListener(this);
+        this.vp = new vistaPerfil();
+        this.vp.setVisible(false);
+        this.vp.agregarListener(this);
+        this.vb = new vistaBatalla();
+        this.vb.setVisible(false);
+        this.vb.agregarListener(this);
         
     }
     @Override
@@ -91,7 +90,7 @@ public class ControladorPrincipal implements ActionListener{
               int num1 = Dado1.lanzarDado();
               String nom1 = Dado1.cara(num1);
               ImageIcon objImag1 = Dado1.ImagenesResultados(num1);
-              vb.getImagen1().setIcon(objImag1);
+              vb.setImagen(objImag1);
               vb.setResultado(nom1);
           }
     }
