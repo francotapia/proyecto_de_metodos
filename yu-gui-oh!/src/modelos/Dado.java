@@ -31,7 +31,7 @@ public class Dado {
     
     public int lanzarDado(){
         Random rGenerador = new Random();
-        numeroDeCara = rGenerador.nextInt(6)+1;    
+        numeroDeCara = rGenerador.nextInt(5)+1;    
         return numeroDeCara;
         
     //metodo que obtiene una cara del dado al azar.

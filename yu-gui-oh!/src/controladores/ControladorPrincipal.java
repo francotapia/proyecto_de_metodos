@@ -96,7 +96,24 @@ public class ControladorPrincipal implements ActionListener{
               ImageIcon objImag1 = Dado1.ImagenesResultados(num1); //se obtiene la imagen de la cara y se guarda en variable
               vb.setImagen(objImag1); //se cambia imagen de label con la variable anterior
               vb.setResultadoD1(nom1); //se inserta en textfield el resultado
-              ac.guardar(num1); //se guarda acción en contadro de acciones
+              int cambio = ac.guardar(num1); //se guarda acción en contadro de acciones
+              
+              if(num1 == 1){
+                  vb.setCantAtk(cambio);
+              }
+              if(num1 == 2){
+                  vb.setCantInv(cambio);
+              }
+              if(num1 == 3){
+                  vb.setCantMag(cambio);
+              }
+              if(num1 == 4){
+                  vb.setCantMov(cambio);
+              }
+              if(num1 == 5){
+                  vb.setCantTram(cambio);
+              }
+
           }
           //Dado2:
           if(vb.getBoton2() == (JButton)e.getSource()){
@@ -106,7 +123,24 @@ public class ControladorPrincipal implements ActionListener{
               ImageIcon objImag2 = Dado2.ImagenesResultados(num2);
               vb.setImagen(objImag2);
               vb.setResultadoD2(nom2);
-              ac.guardar(num2);
+              int cambio = ac.guardar(num2);
+              
+              if(num2 == 1){
+                  vb.setCantAtk(cambio);
+              }
+              if(num2 == 2){
+                  vb.setCantInv(cambio);
+              }
+              if(num2 == 3){
+                  vb.setCantMag(cambio);
+              }
+              if(num2 == 4){
+                  vb.setCantMov(cambio);
+              }
+              if(num2 == 5){
+                  vb.setCantTram(cambio);
+              }
+
           }
           //Dado3:
           if(vb.getBoton3() == (JButton)e.getSource()){
@@ -116,7 +150,24 @@ public class ControladorPrincipal implements ActionListener{
               ImageIcon objImag3 = Dado3.ImagenesResultados(num3);
               vb.setImagen(objImag3);
               vb.setResultadoD3(nom3);
-              ac.guardar(num3);
+              int cambio = ac.guardar(num3);
+              
+                            if(num3 == 1){
+                  vb.setCantAtk(cambio);
+              }
+              if(num3 == 2){
+                  vb.setCantInv(cambio);
+              }
+              if(num3 == 3){
+                  vb.setCantMag(cambio);
+              }
+              if(num3 == 4){
+                  vb.setCantMov(cambio);
+              }
+              if(num3 == 5){
+                  vb.setCantTram(cambio);
+              }
+
           }
           //Dado4:
           if(vb.getBoton4() == (JButton)e.getSource()){
@@ -126,7 +177,25 @@ public class ControladorPrincipal implements ActionListener{
               ImageIcon objImag4 = Dado4.ImagenesResultados(num4);
               vb.setImagen(objImag4);
               vb.setResultadoD4(nom4);
-              ac.guardar(num4);
+              int cambio = ac.guardar(num4);
+              
+                            if(num4 == 1){
+                  vb.setCantAtk(cambio);
+              }
+              if(num4 == 2){
+                  vb.setCantInv(cambio);
+              }
+              if(num4 == 3){
+                  vb.setCantMag(cambio);
+              }
+              if(num4 == 4){
+                  vb.setCantMov(cambio);
+              }
+              if(num4 == 5){
+                  vb.setCantTram(cambio);
+              }
+
+              
           }
     }
     private void verificar(String usuario,String contraseña ){
