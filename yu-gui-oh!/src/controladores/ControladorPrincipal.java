@@ -88,14 +88,45 @@ public class ControladorPrincipal implements ActionListener{
               this.vm.setVisible(true);
           }
           //Cambio de imagen del dado con su resultado.
+          //Dado1:
           if(vb.getBoton1() == (JButton)e.getSource()){
-              Dado Dado1 = new Dado();
-              int num1 = Dado1.lanzarDado();
-              String nom1 = Dado1.cara(num1);
-              ImageIcon objImag1 = Dado1.ImagenesResultados(num1);
-              vb.setImagen(objImag1);
-              vb.setResultado(nom1);
-              ac.guardar(num1);
+              Dado Dado1 = new Dado(); //instanciación de objeto dado con constructor vacío
+              int num1 = Dado1.lanzarDado(); //se llama a metodo del dado que da int al azar (de 1 a 6)
+              String nom1 = Dado1.cara(num1); //se llama a metodo que da nombre a la cara
+              ImageIcon objImag1 = Dado1.ImagenesResultados(num1); //se obtiene la imagen de la cara y se guarda en variable
+              vb.setImagen(objImag1); //se cambia imagen de label con la variable anterior
+              vb.setResultadoD1(nom1); //se inserta en textfield el resultado
+              ac.guardar(num1); //se guarda acción en contadro de acciones
+          }
+          //Dado2:
+          if(vb.getBoton2() == (JButton)e.getSource()){
+              Dado Dado2 = new Dado();
+              int num2 = Dado2.lanzarDado();
+              String nom2 = Dado2.cara(num2);
+              ImageIcon objImag2 = Dado2.ImagenesResultados(num2);
+              vb.setImagen(objImag2);
+              vb.setResultadoD2(nom2);
+              ac.guardar(num2);
+          }
+          //Dado3:
+          if(vb.getBoton3() == (JButton)e.getSource()){
+              Dado Dado3 = new Dado();
+              int num3 = Dado3.lanzarDado();
+              String nom3 = Dado3.cara(num3);
+              ImageIcon objImag3 = Dado3.ImagenesResultados(num3);
+              vb.setImagen(objImag3);
+              vb.setResultadoD3(nom3);
+              ac.guardar(num3);
+          }
+          //Dado4:
+          if(vb.getBoton4() == (JButton)e.getSource()){
+              Dado Dado4 = new Dado();
+              int num4 = Dado4.lanzarDado();
+              String nom4 = Dado4.cara(num4);
+              ImageIcon objImag4 = Dado4.ImagenesResultados(num4);
+              vb.setImagen(objImag4);
+              vb.setResultadoD4(nom4);
+              ac.guardar(num4);
           }
     }
     private void verificar(String usuario,String contraseña ){
