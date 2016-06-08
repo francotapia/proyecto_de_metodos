@@ -38,19 +38,19 @@ public class Dado {
     }
     public String cara(int numero){
         if(numero == 1){
-            this.cara = "magia";
+            this.cara = "Ataque";
         }
         if(numero == 2){
-            this.cara = "movimiento";
+            this.cara = "Invocacion";
         }
         if(numero == 3){
-            this.cara = "invocacion";
+            this.cara = "Magia";
         }
         if(numero == 4){
-            this.cara = "trampa";
+            this.cara = "Movimiento";
         }
         if(numero == 5){
-            this.cara = "ataque";
+            this.cara = "Trampa";
         }
         return cara;
     // metodo que dice a que corresponde la cara que se obtuvo al azar.
@@ -59,6 +59,7 @@ public class Dado {
     public ImageIcon ImagenesResultados(int DadoR){
         System.out.println(DadoR);
         imagenDado = new ImageIcon("Imagenes/carasDados/"+Integer.toString(DadoR)+".png"); 
+        System.out.println(imagenDado);
         return imagenDado;
     
     }

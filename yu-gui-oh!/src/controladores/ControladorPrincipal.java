@@ -7,6 +7,7 @@ package controladores;
 
 import modelos.Jugador;
 import modelos.Dado;
+import modelos.Accion;
 import vistas.vistaLogin;
 import vistas.vistaRegistro;
 import vistas.vistaMenu;
@@ -31,6 +32,7 @@ public class ControladorPrincipal implements ActionListener{
     vistaBatalla vb;
     ControladorLogin contLogin;
     Jugador jug;
+    Accion ac;
 
     /**
      */
@@ -54,6 +56,7 @@ public class ControladorPrincipal implements ActionListener{
         this.vb = new vistaBatalla();
         this.vb.setVisible(false);
         this.vb.agregarListener(this);
+        this.ac = new Accion();
         
     }
     @Override
@@ -92,6 +95,7 @@ public class ControladorPrincipal implements ActionListener{
               ImageIcon objImag1 = Dado1.ImagenesResultados(num1);
               vb.setImagen(objImag1);
               vb.setResultado(nom1);
+              ac.guardar(num1);
           }
     }
     private void verificar(String usuario,String contraseña ){
