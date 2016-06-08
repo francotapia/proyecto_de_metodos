@@ -13,11 +13,13 @@ import vistas.vistaRegistro;
 import vistas.vistaMenu;
 import vistas.vistaPerfil;
 import vistas.vistaBatalla;
+import vistas.vistaDespliegue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import modelos.Tablero;
 
 /**
  *
@@ -30,9 +32,12 @@ public class ControladorPrincipal implements ActionListener{
     vistaMenu vm;
     vistaPerfil vp;
     vistaBatalla vb;
+    vistaDespliegue vd;
     ControladorLogin contLogin;
     Jugador jug;
     Accion ac;
+    Tablero tab;
+    ControladorDespliegue cd;
 
     /**
      */
@@ -57,6 +62,10 @@ public class ControladorPrincipal implements ActionListener{
         this.vb.setVisible(false);
         this.vb.agregarListener(this);
         this.ac = new Accion();
+        this.tab = new Tablero();
+        this.vd = new vistaDespliegue();
+        this.vd.setVisible(false);
+        this.vd.agregarListener(this);
         
     }
     @Override
@@ -86,6 +95,9 @@ public class ControladorPrincipal implements ActionListener{
           if(vp.getBoton2() == (JButton)e.getSource()){
               this.vp.setVisible(false);
               this.vm.setVisible(true);
+          }
+          if(vb.getBotonInv() == (JButton)e.getSource()){
+              this.vd.setVisible(true);
           }
           //Cambio de imagen del dado con su resultado.
           //Dado1:

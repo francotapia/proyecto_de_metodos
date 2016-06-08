@@ -37,7 +37,6 @@ public class vistaBatalla extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jButton225 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
@@ -261,10 +260,11 @@ public class vistaBatalla extends javax.swing.JFrame {
         jButton222 = new javax.swing.JButton();
         jButton223 = new javax.swing.JButton();
         jButton224 = new javax.swing.JButton();
+        jButton225 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jButton231 = new javax.swing.JButton();
         jButton232 = new javax.swing.JButton();
-        jButton233 = new javax.swing.JButton();
+        invocarBT = new javax.swing.JButton();
         jButton234 = new javax.swing.JButton();
         jButton235 = new javax.swing.JButton();
         imagenD1 = new javax.swing.JLabel();
@@ -316,7 +316,6 @@ public class vistaBatalla extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jPanel1.add(jButton225);
 
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -838,14 +837,17 @@ public class vistaBatalla extends javax.swing.JFrame {
         jButton224.setText("jButton224");
         jPanel1.add(jButton224);
 
+        jButton225.setText("jButton226");
+        jPanel1.add(jButton225);
+
         jButton231.setText("Mover");
 
         jButton232.setText("Atacar");
 
-        jButton233.setText("Invocar");
-        jButton233.addActionListener(new java.awt.event.ActionListener() {
+        invocarBT.setText("Invocar");
+        invocarBT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton233ActionPerformed(evt);
+                invocarBTActionPerformed(evt);
             }
         });
 
@@ -932,7 +934,7 @@ public class vistaBatalla extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createSequentialGroup()
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(jButton233, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(invocarBT, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addComponent(contInv))
                                 .addGroup(jPanel2Layout.createSequentialGroup()
@@ -959,33 +961,40 @@ public class vistaBatalla extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(imagenD3, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(tirarD1)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(imagenD1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tirarD3))
+                            .addComponent(tirarD3)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(4, 4, 4)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(resultD3)
-                            .addComponent(resultD1, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE))))
+                            .addComponent(resultD1, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
+                            .addComponent(resultD3))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(resultD4))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tirarD2)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(tirarD2)
+                                .addComponent(imagenD2))
+                            .addGap(101, 101, 101))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(tirarD4)
+                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                    .addComponent(jLabel4)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(resultD2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addContainerGap()))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(imagenD4, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel4)
+                                .addComponent(jLabel8)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(resultD2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(imagenD2))
-                        .addComponent(tirarD4))
-                    .addComponent(imagenD4, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                                .addComponent(resultD4, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap())))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1009,15 +1018,15 @@ public class vistaBatalla extends javax.swing.JFrame {
                         .addComponent(jProgressBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel9)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel13)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(43, 43, 43)
+                .addGap(49, 49, 49)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel17)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 19, Short.MAX_VALUE))
+                .addGap(0, 31, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1029,9 +1038,9 @@ public class vistaBatalla extends javax.swing.JFrame {
                         .addComponent(jLabel9)
                         .addComponent(jLabel13))
                     .addComponent(jLabel17))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jProgressBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1049,11 +1058,11 @@ public class vistaBatalla extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel12)
                                 .addComponent(jLabel16)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel19)
@@ -1067,7 +1076,7 @@ public class vistaBatalla extends javax.swing.JFrame {
                             .addComponent(contAtk))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton233)
+                            .addComponent(invocarBT)
                             .addComponent(contInv))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1120,9 +1129,9 @@ public class vistaBatalla extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1153,9 +1162,9 @@ public class vistaBatalla extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton233ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton233ActionPerformed
+    private void invocarBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_invocarBTActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton233ActionPerformed
+    }//GEN-LAST:event_invocarBTActionPerformed
 
     private void jButton45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton45ActionPerformed
         // TODO add your handling code here:
@@ -1183,6 +1192,7 @@ public class vistaBatalla extends javax.swing.JFrame {
     private javax.swing.JLabel imagenD2;
     private javax.swing.JLabel imagenD3;
     private javax.swing.JLabel imagenD4;
+    private javax.swing.JButton invocarBT;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton100;
@@ -1327,7 +1337,6 @@ public class vistaBatalla extends javax.swing.JFrame {
     private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton231;
     private javax.swing.JButton jButton232;
-    private javax.swing.JButton jButton233;
     private javax.swing.JButton jButton234;
     private javax.swing.JButton jButton235;
     private javax.swing.JButton jButton24;
@@ -2123,6 +2132,234 @@ public class vistaBatalla extends javax.swing.JFrame {
     public JButton getBotonTablero225(){
         return this.jButton225;
     }
+        //Listeners:
+    public void setListenerTablero(ActionListener al){
+        this.jButton1.addActionListener(al);
+        this.jButton2.addActionListener(al);
+        this.jButton3.addActionListener(al);
+        this.jButton4.addActionListener(al);
+        this.jButton5.addActionListener(al);
+        this.jButton6.addActionListener(al);
+        this.jButton7.addActionListener(al);
+        this.jButton8.addActionListener(al);
+        this.jButton9.addActionListener(al);
+        this.jButton10.addActionListener(al);
+        this.jButton11.addActionListener(al);
+        this.jButton12.addActionListener(al);
+        this.jButton13.addActionListener(al);
+        this.jButton14.addActionListener(al);
+        this.jButton15.addActionListener(al);
+        this.jButton16.addActionListener(al);
+        this.jButton17.addActionListener(al);
+        this.jButton18.addActionListener(al);
+        this.jButton19.addActionListener(al);
+        this.jButton20.addActionListener(al);
+        this.jButton21.addActionListener(al);
+        this.jButton22.addActionListener(al);
+        this.jButton23.addActionListener(al);
+        this.jButton24.addActionListener(al);
+        this.jButton25.addActionListener(al);
+        this.jButton26.addActionListener(al);
+        this.jButton27.addActionListener(al);
+        this.jButton28.addActionListener(al);
+        this.jButton29.addActionListener(al);
+        this.jButton30.addActionListener(al);
+        this.jButton31.addActionListener(al);
+        this.jButton32.addActionListener(al);
+        this.jButton33.addActionListener(al);
+        this.jButton34.addActionListener(al);
+        this.jButton35.addActionListener(al);
+        this.jButton36.addActionListener(al);
+        this.jButton37.addActionListener(al);
+        this.jButton38.addActionListener(al);
+        this.jButton39.addActionListener(al);
+        this.jButton40.addActionListener(al);
+        this.jButton41.addActionListener(al);
+        this.jButton42.addActionListener(al);
+        this.jButton43.addActionListener(al);
+        this.jButton44.addActionListener(al);
+        this.jButton45.addActionListener(al);
+        this.jButton46.addActionListener(al);
+        this.jButton47.addActionListener(al);
+        this.jButton48.addActionListener(al);
+        this.jButton49.addActionListener(al);
+        this.jButton50.addActionListener(al);
+        this.jButton51.addActionListener(al);
+        this.jButton52.addActionListener(al);
+        this.jButton53.addActionListener(al);
+        this.jButton54.addActionListener(al);
+        this.jButton55.addActionListener(al);
+        this.jButton56.addActionListener(al);
+        this.jButton57.addActionListener(al);
+        this.jButton58.addActionListener(al);
+        this.jButton59.addActionListener(al);
+        this.jButton60.addActionListener(al);
+        this.jButton61.addActionListener(al);
+        this.jButton62.addActionListener(al);
+        this.jButton63.addActionListener(al);
+        this.jButton64.addActionListener(al);
+        this.jButton65.addActionListener(al);
+        this.jButton66.addActionListener(al);
+        this.jButton67.addActionListener(al);
+        this.jButton68.addActionListener(al);
+        this.jButton69.addActionListener(al);
+        this.jButton70.addActionListener(al);
+        this.jButton71.addActionListener(al);
+        this.jButton72.addActionListener(al);
+        this.jButton73.addActionListener(al);
+        this.jButton74.addActionListener(al);
+        this.jButton75.addActionListener(al);
+        this.jButton76.addActionListener(al);
+        this.jButton77.addActionListener(al);
+        this.jButton78.addActionListener(al);
+        this.jButton79.addActionListener(al);
+        this.jButton80.addActionListener(al);
+        this.jButton81.addActionListener(al);
+        this.jButton82.addActionListener(al);
+        this.jButton83.addActionListener(al);
+        this.jButton84.addActionListener(al);
+        this.jButton85.addActionListener(al);
+        this.jButton86.addActionListener(al);
+        this.jButton87.addActionListener(al);
+        this.jButton88.addActionListener(al);
+        this.jButton89.addActionListener(al);
+        this.jButton90.addActionListener(al);
+        this.jButton91.addActionListener(al);
+        this.jButton92.addActionListener(al);
+        this.jButton93.addActionListener(al);
+        this.jButton94.addActionListener(al);
+        this.jButton95.addActionListener(al);
+        this.jButton96.addActionListener(al);
+        this.jButton97.addActionListener(al);
+        this.jButton98.addActionListener(al);
+        this.jButton99.addActionListener(al);
+        this.jButton100.addActionListener(al);
+        this.jButton101.addActionListener(al);
+        this.jButton102.addActionListener(al);
+        this.jButton103.addActionListener(al);
+        this.jButton104.addActionListener(al);
+        this.jButton105.addActionListener(al);
+        this.jButton106.addActionListener(al);
+        this.jButton107.addActionListener(al);
+        this.jButton108.addActionListener(al);
+        this.jButton109.addActionListener(al);
+        this.jButton110.addActionListener(al);
+        this.jButton111.addActionListener(al);
+        this.jButton112.addActionListener(al);
+        this.jButton113.addActionListener(al);
+        this.jButton114.addActionListener(al);
+        this.jButton115.addActionListener(al);
+        this.jButton116.addActionListener(al);
+        this.jButton117.addActionListener(al);
+        this.jButton118.addActionListener(al);
+        this.jButton119.addActionListener(al);
+        this.jButton120.addActionListener(al);
+        this.jButton121.addActionListener(al);
+        this.jButton122.addActionListener(al);
+        this.jButton123.addActionListener(al);
+        this.jButton124.addActionListener(al);
+        this.jButton125.addActionListener(al);
+        this.jButton126.addActionListener(al);
+        this.jButton127.addActionListener(al);
+        this.jButton128.addActionListener(al);
+        this.jButton129.addActionListener(al);
+        this.jButton130.addActionListener(al);
+        this.jButton131.addActionListener(al);
+        this.jButton132.addActionListener(al);
+        this.jButton133.addActionListener(al);
+        this.jButton134.addActionListener(al);
+        this.jButton135.addActionListener(al);
+        this.jButton136.addActionListener(al);
+        this.jButton137.addActionListener(al);
+        this.jButton138.addActionListener(al);
+        this.jButton139.addActionListener(al);
+        this.jButton140.addActionListener(al);
+        this.jButton141.addActionListener(al);
+        this.jButton142.addActionListener(al);
+        this.jButton143.addActionListener(al);
+        this.jButton144.addActionListener(al);
+        this.jButton145.addActionListener(al);
+        this.jButton146.addActionListener(al);
+        this.jButton147.addActionListener(al);
+        this.jButton148.addActionListener(al);
+        this.jButton149.addActionListener(al);
+        this.jButton150.addActionListener(al);
+        this.jButton151.addActionListener(al);
+        this.jButton152.addActionListener(al);
+        this.jButton153.addActionListener(al);
+        this.jButton154.addActionListener(al);
+        this.jButton155.addActionListener(al);
+        this.jButton156.addActionListener(al);
+        this.jButton157.addActionListener(al);
+        this.jButton158.addActionListener(al);
+        this.jButton159.addActionListener(al);
+        this.jButton160.addActionListener(al);
+        this.jButton161.addActionListener(al);
+        this.jButton162.addActionListener(al);
+        this.jButton163.addActionListener(al);
+        this.jButton164.addActionListener(al);
+        this.jButton165.addActionListener(al);
+        this.jButton166.addActionListener(al);
+        this.jButton167.addActionListener(al);
+        this.jButton168.addActionListener(al);
+        this.jButton169.addActionListener(al);
+        this.jButton170.addActionListener(al);
+        this.jButton171.addActionListener(al);
+        this.jButton172.addActionListener(al);
+        this.jButton173.addActionListener(al);
+        this.jButton174.addActionListener(al);
+        this.jButton175.addActionListener(al);
+        this.jButton176.addActionListener(al);
+        this.jButton177.addActionListener(al);
+        this.jButton178.addActionListener(al);
+        this.jButton179.addActionListener(al);
+        this.jButton180.addActionListener(al);
+        this.jButton181.addActionListener(al);
+        this.jButton182.addActionListener(al);
+        this.jButton183.addActionListener(al);
+        this.jButton184.addActionListener(al);
+        this.jButton185.addActionListener(al);
+        this.jButton186.addActionListener(al);
+        this.jButton187.addActionListener(al);
+        this.jButton188.addActionListener(al);
+        this.jButton189.addActionListener(al);
+        this.jButton190.addActionListener(al);
+        this.jButton191.addActionListener(al);
+        this.jButton192.addActionListener(al);
+        this.jButton193.addActionListener(al);
+        this.jButton194.addActionListener(al);
+        this.jButton195.addActionListener(al);
+        this.jButton196.addActionListener(al);
+        this.jButton197.addActionListener(al);
+        this.jButton198.addActionListener(al);
+        this.jButton199.addActionListener(al);
+        this.jButton200.addActionListener(al);
+        this.jButton201.addActionListener(al);
+        this.jButton202.addActionListener(al);
+        this.jButton203.addActionListener(al);
+        this.jButton204.addActionListener(al);
+        this.jButton205.addActionListener(al);
+        this.jButton206.addActionListener(al);
+        this.jButton207.addActionListener(al);
+        this.jButton208.addActionListener(al);
+        this.jButton209.addActionListener(al);
+        this.jButton210.addActionListener(al);
+        this.jButton211.addActionListener(al);
+        this.jButton212.addActionListener(al);
+        this.jButton213.addActionListener(al);
+        this.jButton214.addActionListener(al);
+        this.jButton215.addActionListener(al);
+        this.jButton216.addActionListener(al);
+        this.jButton217.addActionListener(al);
+        this.jButton218.addActionListener(al);
+        this.jButton219.addActionListener(al);
+        this.jButton220.addActionListener(al);
+        this.jButton221.addActionListener(al);
+        this.jButton222.addActionListener(al);
+        this.jButton223.addActionListener(al);
+        this.jButton224.addActionListener(al);
+        this.jButton225.addActionListener(al);
+    }
     /////////////////////////////////////////
     
     public JButton getBoton1(){
@@ -2136,6 +2373,9 @@ public class vistaBatalla extends javax.swing.JFrame {
     }
     public JButton getBoton4(){
         return this.tirarD4;
+    }
+    public JButton getBotonInv(){
+        return this.invocarBT;
     }
     //get imagenes dados.
     public JLabel getImagen1(){
@@ -2157,7 +2397,7 @@ public class vistaBatalla extends javax.swing.JFrame {
     public JLabel getCantAtk(){
         return this.contAtk;
     }
-    public JLabel getCatnInv(){
+    public JLabel getCantInv(){
         return this.contInv;
     }
     public JLabel getCantTram(){
@@ -2207,5 +2447,6 @@ public class vistaBatalla extends javax.swing.JFrame {
         this.tirarD2.addActionListener(al);
         this.tirarD3.addActionListener(al);
         this.tirarD4.addActionListener(al);
+        this.invocarBT.addActionListener(al);
     }
 }
