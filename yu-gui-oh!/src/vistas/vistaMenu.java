@@ -57,7 +57,7 @@ public class vistaMenu extends javax.swing.JFrame {
                     .addComponent(batallaBT)
                     .addComponent(perfilBT)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(281, Short.MAX_VALUE))
+                .addContainerGap(437, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -70,7 +70,7 @@ public class vistaMenu extends javax.swing.JFrame {
                 .addComponent(batallaBT)
                 .addGap(18, 18, 18)
                 .addComponent(torneoBT)
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addContainerGap(198, Short.MAX_VALUE))
         );
 
         pack();

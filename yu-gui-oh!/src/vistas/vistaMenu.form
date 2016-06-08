@@ -31,7 +31,7 @@
                   <Component id="perfilBT" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" pref="43" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="281" max="32767" attributes="0"/>
+              <EmptySpace pref="437" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -46,7 +46,7 @@
               <Component id="batallaBT" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="torneoBT" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="53" max="32767" attributes="0"/>
+              <EmptySpace pref="198" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
