@@ -49,7 +49,7 @@ public class vistaDespliegue extends javax.swing.JFrame {
 
         jPanel1.setLayout(new java.awt.GridLayout(2, 5));
 
-        jButton1.setText("jButton1");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Despliegue/Despliegue 1.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -57,42 +57,38 @@ public class vistaDespliegue extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1);
 
-        jButton2.setText("jButton2");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Despliegue/Despliegue 2.png"))); // NOI18N
         jPanel1.add(jButton2);
 
-        jButton3.setText("jButton3");
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Despliegue/Despliegue 3.png"))); // NOI18N
         jPanel1.add(jButton3);
-
-        jButton4.setText("jButton4");
         jPanel1.add(jButton4);
-
-        jButton5.setText("jButton5");
         jPanel1.add(jButton5);
 
-        jButton6.setText("jButton6");
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Despliegue/Despliegue 6.png"))); // NOI18N
         jPanel1.add(jButton6);
 
-        jButton7.setText("jButton7");
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Despliegue/Despliegue 7.png"))); // NOI18N
         jPanel1.add(jButton7);
 
-        jButton8.setText("jButton8");
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Despliegue/Despliegue 8.png"))); // NOI18N
         jPanel1.add(jButton8);
 
-        jButton9.setText("jButton9");
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Despliegue/Despliegue 9.png"))); // NOI18N
         jPanel1.add(jButton9);
 
-        jButton10.setText("jButton10");
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Despliegue/Despliegue 10.png"))); // NOI18N
         jPanel1.add(jButton10);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 420, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
