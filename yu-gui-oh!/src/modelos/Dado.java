@@ -27,7 +27,7 @@ public class Dado {
         this.camino = camino;
         this.nombreCriatura = nombreCriatura;
     } 
-    public Dado(){}
+    public Dado(){} //constructor vacio
     
     public int lanzarDado(){
         Random rGenerador = new Random();

@@ -14,6 +14,7 @@ import vistas.vistaMenu;
 import vistas.vistaPerfil;
 import vistas.vistaBatalla;
 import vistas.vistaDespliegue;
+import vistas.vistaInvocacion;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
@@ -33,11 +34,13 @@ public class ControladorPrincipal implements ActionListener{
     vistaPerfil vp;
     vistaBatalla vb;
     vistaDespliegue vd;
+    vistaInvocacion vi;
     ControladorLogin contLogin;
     Jugador jug;
     Accion ac;
     Tablero tab;
     ControladorDespliegue cd;
+    ControladorInvocacion ci;
 
     /**
      */

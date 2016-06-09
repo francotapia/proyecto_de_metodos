@@ -917,6 +917,7 @@ public class vistaBatalla extends javax.swing.JFrame {
 
         jLabel19.setText("Guardados:");
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
