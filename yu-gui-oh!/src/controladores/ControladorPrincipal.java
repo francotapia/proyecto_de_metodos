@@ -69,7 +69,9 @@ public class ControladorPrincipal implements ActionListener{
         this.vd = new vistaDespliegue();
         this.vd.setVisible(false);
         this.vd.agregarListener(this);
-        
+        this.vi = new vistaInvocacion();
+        this.vi.setVisible(false);
+        this.vi.setListenerInvocacion(this);
     }
     @Override
     public void actionPerformed(ActionEvent e){
@@ -99,8 +101,12 @@ public class ControladorPrincipal implements ActionListener{
               this.vp.setVisible(false);
               this.vm.setVisible(true);
           }
-          if(vb.getBotonInv() == (JButton)e.getSource()){
+          if(vb.getBotonInv() == (JButton)e.getSource()){ //
+              this.vi.setVisible(true);
+          }
+          if(vi.getBotonAceptar() == (JButton)e.getSource()){
               this.vd.setVisible(true);
+              this.vi.setVisible(false);
           }
           //Cambio de imagen del dado con su resultado.
           //Dado1:
