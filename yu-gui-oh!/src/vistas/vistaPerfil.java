@@ -9,6 +9,7 @@ import controladores.ControladorPrincipal;
 import controladores.ControladorPerfil;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 
 /**
  *
@@ -39,7 +40,7 @@ public class vistaPerfil extends javax.swing.JFrame {
         JefeDTCB = new javax.swing.JComboBox<>();
         DificultadCB = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        imagJefeTerreno = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -51,11 +52,13 @@ public class vistaPerfil extends javax.swing.JFrame {
 
         atrasBT.setText("Atras");
 
-        JefeDTCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pinky", "Viru", "Hiche", "Zolezzi", "Capitán América", "IronMan", "StarLord", "Thanos", "Hulk", "Odin" }));
+        JefeDTCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pinky", "Viru", "Hiche", "Zolezzi", "Capitán América", "IronMan", "Star Lord", "Thanos", "Hulk", "Odin" }));
 
         DificultadCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Facil", "Normal", "Dificil" }));
 
         jLabel3.setText("PERFIL:");
+
+        imagJefeTerreno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/JefesDeTerreno/hulk.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -70,18 +73,18 @@ public class vistaPerfil extends javax.swing.JFrame {
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
                             .addComponent(aceptarBT))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 366, Short.MAX_VALUE)
+                                .addComponent(atrasBT)
+                                .addGap(30, 30, 30))
                             .addGroup(layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(JefeDTCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(DificultadCB, 0, 79, Short.MAX_VALUE))
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 366, Short.MAX_VALUE)
-                                .addComponent(atrasBT)
-                                .addGap(30, 30, 30))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(imagJefeTerreno)
+                                .addGap(61, 61, 61))))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
@@ -100,10 +103,9 @@ public class vistaPerfil extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(DificultadCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 105, Short.MAX_VALUE))
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
+                            .addComponent(DificultadCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(imagJefeTerreno))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(aceptarBT)
                     .addComponent(atrasBT))
@@ -123,10 +125,10 @@ public class vistaPerfil extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> JefeDTCB;
     private javax.swing.JButton aceptarBT;
     private javax.swing.JButton atrasBT;
+    private javax.swing.JLabel imagJefeTerreno;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 
     public JButton getBoton1(){
@@ -134,6 +136,9 @@ public class vistaPerfil extends javax.swing.JFrame {
     }
     public JButton getBoton2(){
         return this.atrasBT;
+    }
+    public JLabel getImagJT(){
+        return this.imagJefeTerreno;
     }
     
     public void agregarListener(ActionListener al){
