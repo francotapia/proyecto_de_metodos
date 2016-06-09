@@ -101,10 +101,10 @@ public class ControladorPrincipal implements ActionListener{
               this.vp.setVisible(false);
               this.vm.setVisible(true);
           }
-          if(vb.getBotonInv() == (JButton)e.getSource()){ //
+          if(vb.getBotonInv() == (JButton)e.getSource()){ //mostrar vista invocacion
               this.vi.setVisible(true);
           }
-          if(vi.getBotonAceptar() == (JButton)e.getSource()){
+          if(vi.getBotonAceptar() == (JButton)e.getSource()){ //mostrar vista despliegue desde v.invocacion
               this.vd.setVisible(true);
               this.vi.setVisible(false);
           }
