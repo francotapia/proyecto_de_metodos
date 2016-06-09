@@ -62,7 +62,11 @@ public class vistaDespliegue extends javax.swing.JFrame {
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Despliegue/Despliegue 3.png"))); // NOI18N
         jPanel1.add(jButton3);
+
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Despliegue/Despliegue 4.png"))); // NOI18N
         jPanel1.add(jButton4);
+
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Despliegue/Despliegue 5.png"))); // NOI18N
         jPanel1.add(jButton5);
 
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Despliegue/Despliegue 6.png"))); // NOI18N
