@@ -92,6 +92,7 @@ public class ControladorPrincipal implements ActionListener{
           if(vm.getBoton2() == (JButton)e.getSource()){
               this.vm.setVisible(false);
               this.vb.setVisible(true);
+              this.vb.Botones();
           }
           if(vm.getBoton1() == (JButton)e.getSource()){
               this.vm.setVisible(false);
