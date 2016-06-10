@@ -93,6 +93,7 @@ public class ControladorPrincipal implements ActionListener{
               this.vm.setVisible(false);
               this.vb.setVisible(true);
               this.vb.Botones();
+              vb.desactivar();
           }
           if(vm.getBoton1() == (JButton)e.getSource()){
               this.vm.setVisible(false);
@@ -122,18 +123,33 @@ public class ControladorPrincipal implements ActionListener{
               
               if(num1 == 1){
                   vb.setCantAtk(cambio);
+                  if(ac.getAtaque() != 0){//verifica que el contador es distinto a cero.
+                      vb.activarAtk();//activa el boton de accion.
+                  }
               }
               if(num1 == 2){
                   vb.setCantInv(cambio);
+                  if(ac.getInvocacion() != 0){
+                      vb.activarInv();
+                  }
               }
               if(num1 == 3){
                   vb.setCantMag(cambio);
+                  if(ac.getMagia() != 0){
+                      vb.activarMag();
+                  }
               }
               if(num1 == 4){
                   vb.setCantMov(cambio);
+                  if(ac.getMovimiento() != 0){
+                      vb.activarMov();
+                  }
               }
               if(num1 == 5){
                   vb.setCantTram(cambio);
+                  if(ac.getTrampa() != 0){
+                      vb.activarTram();
+                  }
               }
 
           }
@@ -149,18 +165,33 @@ public class ControladorPrincipal implements ActionListener{
               
               if(num2 == 1){
                   vb.setCantAtk(cambio);
+                  if(ac.getAtaque() != 0){//verifica que el contador es distinto a cero.
+                      vb.activarAtk();//activa el boton de accion.
+                  }
               }
               if(num2 == 2){
                   vb.setCantInv(cambio);
+                  if(ac.getInvocacion() != 0){
+                      vb.activarInv();
+                  }
               }
               if(num2 == 3){
                   vb.setCantMag(cambio);
+                  if(ac.getMagia() != 0){
+                      vb.activarMag();
+                  }
               }
               if(num2 == 4){
                   vb.setCantMov(cambio);
+                  if(ac.getMovimiento() != 0){
+                      vb.activarMov();
+                  }
               }
               if(num2 == 5){
                   vb.setCantTram(cambio);
+                  if(ac.getTrampa() != 0){
+                      vb.activarTram();
+                  }
               }
 
           }
@@ -174,20 +205,35 @@ public class ControladorPrincipal implements ActionListener{
               vb.setResultadoD3(nom3);
               int cambio = ac.guardar(num3);
               
-                            if(num3 == 1){
+              if(num3 == 1){
                   vb.setCantAtk(cambio);
+                  if(ac.getAtaque() != 0){//verifica que el contador es distinto a cero.
+                      vb.activarAtk();//activa el boton de accion.
+                  }
               }
               if(num3 == 2){
                   vb.setCantInv(cambio);
+                  if(ac.getInvocacion() != 0){
+                      vb.activarInv();
+                  }
               }
               if(num3 == 3){
                   vb.setCantMag(cambio);
+                  if(ac.getMagia() != 0){
+                      vb.activarMag();
+                  }
               }
               if(num3 == 4){
                   vb.setCantMov(cambio);
+                  if(ac.getMovimiento() != 0){
+                      vb.activarMov();
+                  }
               }
               if(num3 == 5){
                   vb.setCantTram(cambio);
+                  if(ac.getTrampa() != 0){
+                      vb.activarTram();
+                  }
               }
 
           }
@@ -201,23 +247,36 @@ public class ControladorPrincipal implements ActionListener{
               vb.setResultadoD4(nom4);
               int cambio = ac.guardar(num4);
               
-                            if(num4 == 1){
+              if(num4 == 1){
                   vb.setCantAtk(cambio);
+                  if(ac.getAtaque() != 0){//verifica que el contador es distinto a cero.
+                      vb.activarAtk();//activa el boton de accion.
+                  }
               }
               if(num4 == 2){
                   vb.setCantInv(cambio);
+                  if(ac.getInvocacion() != 0){
+                      vb.activarInv();
+                  }
               }
               if(num4 == 3){
                   vb.setCantMag(cambio);
+                  if(ac.getMagia() != 0){
+                      vb.activarMag();
+                  }
               }
               if(num4 == 4){
                   vb.setCantMov(cambio);
+                  if(ac.getMovimiento() != 0){
+                      vb.activarMov();
+                  }
               }
               if(num4 == 5){
                   vb.setCantTram(cambio);
-              }
-
-              
+                  if(ac.getTrampa() != 0){
+                      vb.activarTram();
+                  }
+              }   
           }
     }
     private void verificar(String usuario,String contraseña ){

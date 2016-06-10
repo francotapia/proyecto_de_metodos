@@ -36,11 +36,11 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jPanel1" max="32767" attributes="0"/>
                   <Component id="jPanel2" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="31" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -70,14 +70,14 @@
                                       <Component id="contInv" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jButton232" min="-2" pref="105" max="-2" attributes="0"/>
+                                      <Component id="atacarBT" min="-2" pref="105" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="contAtk" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jButton234" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
-                                          <Component id="jButton235" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
+                                          <Component id="trampaBT" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
+                                          <Component id="magiaBT" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -94,7 +94,7 @@
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jButton231" min="-2" pref="105" max="-2" attributes="0"/>
+                          <Component id="moverBT" min="-2" pref="105" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="contMov" min="-2" pref="18" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -249,7 +249,7 @@
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="44" max="32767" attributes="0"/>
                           <Component id="jScrollPane1" min="-2" pref="240" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -259,12 +259,12 @@
                           <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton231" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="moverBT" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="contMov" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton232" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="atacarBT" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="contAtk" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -274,17 +274,15 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton234" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="trampaBT" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="contTram" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton235" min="-2" max="-2" attributes="0"/>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="contMag" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
-                              </Group>
+                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="contMag" min="-2" max="-2" attributes="0"/>
+                              <Component id="magiaBT" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -327,20 +325,19 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jButton231">
+        <Component class="javax.swing.JButton" name="moverBT">
           <Properties>
             <Property name="text" type="java.lang.String" value="Mover"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton232">
+        <Component class="javax.swing.JButton" name="atacarBT">
           <Properties>
             <Property name="text" type="java.lang.String" value="Atacar"/>
           </Properties>
@@ -353,12 +350,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="invocarBTActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton234">
+        <Component class="javax.swing.JButton" name="trampaBT">
           <Properties>
             <Property name="text" type="java.lang.String" value="Trampa"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton235">
+        <Component class="javax.swing.JButton" name="magiaBT">
           <Properties>
             <Property name="text" type="java.lang.String" value="Magia"/>
           </Properties>
