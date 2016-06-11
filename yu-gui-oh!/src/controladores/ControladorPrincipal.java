@@ -11,6 +11,7 @@ import modelos.Accion;
 import vistas.vistaLogin;
 import vistas.vistaRegistro;
 import vistas.vistaMenu;
+import vistas.vistaMenuBatalla;
 import vistas.vistaPerfil;
 import vistas.vistaBatalla;
 import vistas.vistaDespliegue;
@@ -19,7 +20,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JLabel;
 import modelos.Tablero;
 
 /**
@@ -31,6 +31,7 @@ public class ControladorPrincipal implements ActionListener{
     vistaLogin vl;
     vistaRegistro vr;
     vistaMenu vm;
+    vistaMenuBatalla vmb;
     vistaPerfil vp;
     vistaBatalla vb;
     vistaDespliegue vd;
@@ -58,6 +59,9 @@ public class ControladorPrincipal implements ActionListener{
         this.vm = new vistaMenu();
         this.vm.setVisible(false);
         this.vm.agregarListener(this);
+        this.vmb = new vistaMenuBatalla();
+        this.vmb.setVisible(false);
+        this.vmb.agregarListener(this);
         this.vp = new vistaPerfil();
         this.vp.setVisible(false);
         this.vp.agregarListener(this);
@@ -91,10 +95,18 @@ public class ControladorPrincipal implements ActionListener{
           }
           if(vm.getBoton2() == (JButton)e.getSource()){
               this.vm.setVisible(false);
+              this.vmb.setVisible(true);
+              //this.vb.setVisible(true);
+              //this.vb.botones();
+              //vb.desactivar();
+          }
+          if(vmb.getBoton() == (JButton)e.getSource()){
+              this.vmb.setVisible(false);
               this.vb.setVisible(true);
               this.vb.botones();
               vb.desactivar();
           }
+          
           if(vm.getBoton1() == (JButton)e.getSource()){
               this.vm.setVisible(false);
               this.vp.setVisible(true);
