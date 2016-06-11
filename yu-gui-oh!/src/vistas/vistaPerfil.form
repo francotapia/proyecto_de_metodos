@@ -47,7 +47,7 @@
                                   <Component id="jLabel1" pref="86" max="32767" attributes="0"/>
                                   <Component id="aceptarBT" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="366" max="32767" attributes="0"/>
+                              <EmptySpace pref="416" max="32767" attributes="0"/>
                               <Component id="atrasBT" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
@@ -83,7 +83,7 @@
                   </Group>
                   <Component id="imagJefeTerreno" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="56" max="32767" attributes="0"/>
+              <EmptySpace pref="46" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="aceptarBT" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="atrasBT" alignment="3" min="-2" max="-2" attributes="0"/>
