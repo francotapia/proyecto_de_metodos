@@ -117,6 +117,7 @@ public class ControladorPrincipal implements ActionListener{
               int num1 = Dado1.lanzarDado(); //se llama a metodo del dado que da int al azar (de 1 a 6)
               String nom1 = Dado1.cara(num1); //se llama a metodo que da nombre a la cara
               ImageIcon objImag1 = Dado1.ImagenesResultados(num1); //se obtiene la imagen de la cara y se guarda en variable
+              
               vb.setImagen(objImag1); //se cambia imagen de label con la variable anterior
               vb.setResultadoD1(nom1); //se inserta en textfield el resultado
               int cambio = ac.guardar(num1); //se guarda acción en contadro de acciones

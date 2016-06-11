@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package modelos;
+import java.net.URL;
 import java.util.Random;
 import javax.swing.ImageIcon;
 /**
@@ -57,10 +58,12 @@ public class Dado {
     }
 
     public ImageIcon ImagenesResultados(int DadoR){
-        System.out.println(DadoR);
-        imagenDado = new ImageIcon("Imagenes/carasDados/"+Integer.toString(DadoR)+".png"); 
+        String urlIDado = "\\Imagenes\\carasDados\\"+Integer.toString(DadoR)+".png";
+        URL url1 = this.getClass().getClassLoader().getResource(urlIDado);
+        ImageIcon imagenDado = new ImageIcon(url1);
         System.out.println(imagenDado);
         return imagenDado;
-    
+        //this.ImagenesResultados.setIcon(imagenDado);
+      //imagenDado = new ImageIcon("\\Imagenes\\carasDados\\"+Integer.toString(DadoR)+".png");
     }
 }
