@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+//mouse over y mouse out
 package vistas;
 
 import java.awt.event.ActionListener;
@@ -10,6 +11,7 @@ import javax.swing.JButton;
 import controladores.ControladorPrincipal;
 import java.awt.Color;
 import java.awt.GridLayout;
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -26,6 +28,7 @@ public class vistaBatalla extends javax.swing.JFrame {
     
     public vistaBatalla() {
         initComponents();
+        this.botones();
     }
 
     
@@ -460,27 +463,28 @@ public class vistaBatalla extends javax.swing.JFrame {
     
     //Tablero:
     //cantidad de botones:15x15
+    private JButton[][] boton;
     int columnas = 15;
     int filas = 15;
     
     //Método que genera un arreglo bidimensional de botones
-    public void Botones(){
+    public void botones(){
        
-        JButton[][] boton = new JButton [filas][columnas];
+        this.boton = new JButton [filas][columnas];
+       
         JFrame v = new JFrame();
         jPanel1.setLayout(new GridLayout(filas,columnas));
         
          for (int x = 0;x<filas;x++){
             for (int y = 0;y<columnas;y++){
                 boton[x][y] = new JButton();
+              
                 jPanel1.add(boton[x][y]);
-    
           }
-         }
-    }            
-                
-                
-                
+        }
+    }
+   
+                             
 /////////////////////////////////////////
     
     public JButton getBoton1(){
@@ -592,5 +596,11 @@ public class vistaBatalla extends javax.swing.JFrame {
         this.tirarD3.addActionListener(al);
         this.tirarD4.addActionListener(al);
         this.invocarBT.addActionListener(al);
+        for (int i=0;i<15;i++) {
+            for (int j=0;j<15;j++) {
+                this.boton[i][j].addActionListener(al);
+            }
+        }
     }
+
 }

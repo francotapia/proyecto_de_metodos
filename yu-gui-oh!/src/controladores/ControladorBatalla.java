@@ -40,6 +40,7 @@ public class ControladorBatalla implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent ae) {
+        System.out.println("Hago algo");
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
