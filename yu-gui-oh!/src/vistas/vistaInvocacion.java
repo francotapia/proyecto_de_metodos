@@ -19,6 +19,7 @@ public class vistaInvocacion extends javax.swing.JFrame {
 
     public vistaInvocacion() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

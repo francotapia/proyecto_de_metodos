@@ -22,6 +22,7 @@ public class vistaPerfil extends javax.swing.JFrame {
      */
     public vistaPerfil() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

@@ -21,6 +21,7 @@ public class vistaRegistro extends javax.swing.JFrame {
      */
     public vistaRegistro() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

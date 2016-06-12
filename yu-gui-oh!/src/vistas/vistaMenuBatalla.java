@@ -20,6 +20,7 @@ public class vistaMenuBatalla extends javax.swing.JFrame {
      */
     public vistaMenuBatalla() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

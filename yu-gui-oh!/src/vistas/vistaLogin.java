@@ -5,9 +5,15 @@
  */
 package vistas;
 
+import java.awt.Container;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.event.ActionListener;
+import java.net.URL;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
@@ -15,12 +21,18 @@ import javax.swing.JOptionPane;
  */
 
 public class vistaLogin extends javax.swing.JFrame {
-
-    /**
-     * Creates new form vistaLogin
-     */
+    
+    public Image imagenFondo;
+    public URL fondo;
+    
     public vistaLogin() {
         initComponents();
+        this.setLocationRelativeTo(null);//vista aparece al medio de la pantalla
+        
+        fondo = this.getClass().getResource("/Imagenes/fondoLogin.jpg");
+        imagenFondo = new ImageIcon(fondo).getImage();   
+        Container contenedor = getContentPane();
+        contenedor.add(jPanel2);
     }
 
     /**
@@ -186,3 +198,8 @@ public class vistaLogin extends javax.swing.JFrame {
         
     }    
 }
+
+   //public JPanel jPanel2 = new Panel(){
+     // public void paintComponent(Graphics g){
+       // g.drawImage(imagenFondo, 0, 0, getWidth(), getHeight(), this);
+    //}

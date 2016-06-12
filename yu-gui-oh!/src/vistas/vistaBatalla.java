@@ -28,6 +28,7 @@ public class vistaBatalla extends javax.swing.JFrame {
     
     public vistaBatalla() {
         initComponents();
+        this.setLocationRelativeTo(null);
         this.botones();
     }
 
