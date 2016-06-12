@@ -6,6 +6,7 @@
 //mouse over y mouse out
 package vistas;
 
+import controladores.ControladorBatalla;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import controladores.ControladorPrincipal;
@@ -29,7 +30,7 @@ public class vistaBatalla extends javax.swing.JFrame {
     public vistaBatalla() {
         initComponents();
         this.setLocationRelativeTo(null);
-        this.botones();
+        this.generarBotones();
     }
 
     
@@ -462,26 +463,24 @@ public class vistaBatalla extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     
     
-    //Tablero:
-    //cantidad de botones:15x15
-    private JButton[][] boton;
+   //Tablero:
+    //cantidad de botones en tablero:15x15
+    private JButton[][] matriz;
     int columnas = 15;
     int filas = 15;
-    
+ 
     //Método que genera un arreglo bidimensional de botones
-    public void botones(){
-       
-        this.boton = new JButton [filas][columnas];
-       
+    public void generarBotones(){
+        this.matriz = new JButton [filas][columnas];
         JFrame v = new JFrame();
         jPanel1.setLayout(new GridLayout(filas,columnas));
-        
-         for (int x = 0;x<filas;x++){
-            for (int y = 0;y<columnas;y++){
-                boton[x][y] = new JButton();
-              
-                jPanel1.add(boton[x][y]);
-          }
+        for (int x = 0;x < filas; x++){
+            for (int y = 0;y < columnas; y++){
+                matriz[x][y] = new JButton();
+                matriz[x][y] = new  ControladorBatalla(45*columnas,35*filas,55,45);
+                jPanel1.add(matriz[x][y]);  
+                
+            }
         }
     }
    
@@ -597,9 +596,11 @@ public class vistaBatalla extends javax.swing.JFrame {
         this.tirarD3.addActionListener(al);
         this.tirarD4.addActionListener(al);
         this.invocarBT.addActionListener(al);
-        for (int i=0;i<15;i++) {
-            for (int j=0;j<15;j++) {
-                this.boton[i][j].addActionListener(al);
+        //NO SIRVE PERO NO BORRAR (AUN)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //Ciclo for que permite escucha a cada botón del tablero
+        for (int i=0;i<15;i++) { //por cada fila del tablero
+            for (int j=0;j<15;j++) { //por cada elemento de cada fila
+                this.matriz[i][j].addActionListener(al); //escuchar elementos(botones)
             }
         }
     }
