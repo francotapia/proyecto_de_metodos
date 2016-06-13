@@ -9,6 +9,7 @@ import controladores.ControladorPrincipal;
 import controladores.ControladorRegistro;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 
 /**
  *
@@ -193,7 +194,11 @@ public class vistaRegistro extends javax.swing.JFrame {
     public JButton getBoton(){
       return this.aceptarBT;
     }
+    public JComboBox getComboboxJt(){
+      return this.JefesDTCB;
+    }
     public void agregarListener(ActionListener al){
         this.aceptarBT.addActionListener(al);
+        this.JefesDTCB.addActionListener(al);
     }  
 }

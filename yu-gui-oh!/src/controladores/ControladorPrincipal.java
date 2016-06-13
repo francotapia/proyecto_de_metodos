@@ -129,7 +129,7 @@ public class ControladorPrincipal implements ActionListener{
               String nom1 = Dado1.cara(num1); //se llama a metodo que da nombre a la cara
               ImageIcon objImag1 = Dado1.ImagenesResultados(num1); //se obtiene la imagen de la cara y se guarda en variable
               
-              vb.setImagen(objImag1); //se cambia imagen de label con la variable anterior
+              //vb.setImagen(objImag1); //se cambia imagen de label con la variable anterior
               vb.setResultadoD1(nom1); //se inserta en textfield el resultado
               int cambio = ac.guardar(num1); //se guarda acción en contadro de acciones
               
@@ -289,7 +289,29 @@ public class ControladorPrincipal implements ActionListener{
                       vb.activarTram();
                   }
               }   
-          }
+        }
+        //se restan los contadores cuando los usan.
+        if(vb.getBotonAtk() == (JButton)e.getSource()){
+            int cant = ac.usar(ac.getAtaque());
+            vb.setCantAtk(cant);
+        }
+        if(vb.getBotonMov() == (JButton)e.getSource()){
+            int cant = ac.usar(ac.getMovimiento());
+            vb.setCantMov(cant);
+        }
+        if(vb.getBotonInv() == (JButton)e.getSource()){
+            int cant = ac.usar(ac.getInvocacion());
+            vb.setCantInv(cant);
+        }
+        if(vb.getBotonTam() == (JButton)e.getSource()){
+            int cant = ac.usar(ac.getTrampa());
+            vb.setCantTram(cant);
+        }
+        if(vb.getBotonMag() == (JButton)e.getSource()){
+            int cant = ac.usar(ac.getMagia());
+            vb.setCantMag(cant);
+        }
+          
     }
     private void verificar(String usuario,String contraseña ){
         if(jug.existe(usuario)){

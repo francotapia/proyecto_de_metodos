@@ -20,6 +20,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
 
+
 /**
  *
  * @author franco
@@ -82,7 +83,7 @@ public class vistaBatalla extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabel17 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        turnoBT = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -172,7 +173,7 @@ public class vistaBatalla extends javax.swing.JFrame {
 
         jLabel17.setText("Acciones:");
 
-        jButton1.setText("Terminar Turno");
+        turnoBT.setText("Terminar Turno");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -281,7 +282,7 @@ public class vistaBatalla extends javax.swing.JFrame {
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(turnoBT, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 31, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -379,7 +380,7 @@ public class vistaBatalla extends javax.swing.JFrame {
                             .addComponent(tirarD3)
                             .addComponent(tirarD4))))
                 .addGap(7, 7, 7)
-                .addComponent(jButton1))
+                .addComponent(turnoBT))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -398,10 +399,8 @@ public class vistaBatalla extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -428,7 +427,6 @@ public class vistaBatalla extends javax.swing.JFrame {
     private javax.swing.JLabel imagenD3;
     private javax.swing.JLabel imagenD4;
     private javax.swing.JButton invocarBT;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -462,6 +460,7 @@ public class vistaBatalla extends javax.swing.JFrame {
     private javax.swing.JButton tirarD3;
     private javax.swing.JButton tirarD4;
     private javax.swing.JButton trampaBT;
+    private javax.swing.JButton turnoBT;
     // End of variables declaration//GEN-END:variables
     
     
@@ -501,8 +500,23 @@ public class vistaBatalla extends javax.swing.JFrame {
     public JButton getBoton4(){
         return this.tirarD4;
     }
+    public JButton getBotonMov(){
+        return this.moverBT;
+    }
+    public JButton getBotonAtk(){
+        return this.atacarBT;
+    }
     public JButton getBotonInv(){
         return this.invocarBT;
+    }
+    public JButton getBotonTam(){
+        return this.trampaBT;
+    }
+    public JButton getBotonMag(){
+        return this.magiaBT;
+    }
+    public JButton getBotonTurn(){
+        return this.turnoBT;
     }
     //get imagenes dados.
     public JLabel getImagen1(){
@@ -552,8 +566,8 @@ public class vistaBatalla extends javax.swing.JFrame {
     //set para cambiar las imagenes.
     
     public void setImagen(ImageIcon imagen){
-        this.imagenD1.setIcon(new ImageIcon("Imagenes\\carasDados\\3.png"));
-        //this.imagenD1.setIcon(imagen);
+        //this.imagenD1.setIcon(new ImageIcon("Imagenes\\carasDados\\3.png"));
+        this.imagenD1.setIcon(imagen);
     }
     //set para mostrar el resultado como texto.
     public void setResultadoD1(String nombre){
@@ -598,6 +612,11 @@ public class vistaBatalla extends javax.swing.JFrame {
         this.tirarD3.addActionListener(al);
         this.tirarD4.addActionListener(al);
         this.invocarBT.addActionListener(al);
+        this.atacarBT.addActionListener(al);
+        this.magiaBT.addActionListener(al);
+        this.moverBT.addActionListener(al);
+        this.trampaBT.addActionListener(al);
+        this.turnoBT.addActionListener(al);
         //NO SIRVE PERO NO BORRAR (AUN)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         //Ciclo for que permite escucha a cada botón del tablero
         for (int i=0;i<15;i++) { //por cada fila del tablero

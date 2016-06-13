@@ -75,4 +75,8 @@ public class Accion {
             return -1;
         }
     }
+    public int usar(int num){
+        int numero = num - 1;
+        return numero;
+    }
 }

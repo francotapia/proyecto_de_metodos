@@ -53,7 +53,7 @@ public class ControladorBatalla extends JButton implements ActionListener{
      setBackground(Color.GREEN);
      System.out.println("Soy un botón y soy verde");
           
-        
-        
+
+     
     }
 }

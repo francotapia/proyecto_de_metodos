@@ -9,19 +9,25 @@ package modelos;
  *
  * @author franc
  */
-public class Criatura extends ElementoEnElCampo {
+public class Criatura {
     
     private int vida;
     private int def;
     private int atk;
     private int nivel;
+    private int posicion;
     private String nombre;
     
     //metodos set de vida
     public void setVida(int vida){ //reemplaza vida luego de ataque
         this.vida = vida;
     }
-    
+    public int getPosicion(){
+        return this.posicion;
+    }
+    public void setPosicion(int posicion){
+        this.posicion = posicion;
+    }
     public int getAtk(){ 
         return atk;
     }
@@ -38,10 +44,15 @@ public class Criatura extends ElementoEnElCampo {
         return nivel;
     }
 
-    public int restarVida(){
+    public int restarVida(int atk, int def){
+        int vidaN = def - atk;
+        this.vida = vidaN;
         return vida;
     // metodo que resta la vida de la criatura cuando recibe un ataque
     
+    }
+    public void atacar(){
+        
     }
 
 }
