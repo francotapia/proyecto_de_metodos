@@ -19,6 +19,7 @@ public class vistaDespliegue extends javax.swing.JFrame {
      */
     public vistaDespliegue() {
         initComponents();
+        this.setLocationRelativeTo(null);//vista aparece al medio de la pantalla
     }
 
     /**

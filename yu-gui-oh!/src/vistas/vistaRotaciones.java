@@ -5,6 +5,9 @@
  */
 package vistas;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+
 /**
  *
  * @author sebastian
@@ -16,6 +19,7 @@ public class vistaRotaciones extends javax.swing.JFrame {
      */
     public vistaRotaciones() {
         initComponents();
+        this.setLocationRelativeTo(null);//vista aparece al medio de la pantalla
     }
 
     /**
@@ -75,4 +79,43 @@ public class vistaRotaciones extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getjButton1() {
+        return jButton1;
+    }
+
+    public void setjButton1(JButton jButton1) {
+        this.jButton1 = jButton1;
+    }
+
+    public JButton getjButton2() {
+        return jButton2;
+    }
+
+    public void setjButton2(JButton jButton2) {
+        this.jButton2 = jButton2;
+    }
+
+    public JButton getjButton3() {
+        return jButton3;
+    }
+
+    public void setjButton3(JButton jButton3) {
+        this.jButton3 = jButton3;
+    }
+
+    public JButton getjButton4() {
+        return jButton4;
+    }
+
+    public void setjButton4(JButton jButton4) {
+        this.jButton4 = jButton4;
+    }
+    public void agregarListener(ActionListener al){
+        this.jButton1.addActionListener(al);
+        this.jButton2.addActionListener(al);
+        this.jButton3.addActionListener(al);
+        this.jButton4.addActionListener(al);
+        
+    }
 }

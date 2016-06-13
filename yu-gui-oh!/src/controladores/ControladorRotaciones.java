@@ -5,10 +5,38 @@
  */
 package controladores;
 
+import java.awt.event.ActionEvent;
+import vistas.vistaDespliegue;
+import modelos.Tablero;
+import controladores.ControladorPrincipal;
+import java.awt.event.ActionListener;
+import vistas.vistaBatalla;
+import vistas.vistaRotaciones;
+
 /**
  *
  * @author sebastian
  */
-public class ControladorRotaciones {
+public class ControladorRotaciones implements ActionListener {
+    private vistaRotaciones vr;
+    private Tablero terr;
+    private ControladorPrincipal cp;
+    private ControladorBatalla cb;
+    
+    public vistaRotaciones getVistaRotaciones(){
+        return this.vr;
+    }
+
+    public void verVista (ControladorPrincipal cp){
+        this.cp = cp;
+        this.vr = new vistaRotaciones();
+        this.vr.setVisible(true);
+        this.vr.agregarListener(this);
+    }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
     
 }

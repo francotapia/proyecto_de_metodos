@@ -21,6 +21,7 @@ import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import modelos.Tablero;
+import vistas.vistaRotaciones;
 
 /**
  *
@@ -28,6 +29,7 @@ import modelos.Tablero;
  */
 public class ControladorPrincipal implements ActionListener{
     
+    ////vistas////
     vistaLogin vl;
     vistaRegistro vr;
     vistaMenu vm;
@@ -36,12 +38,17 @@ public class ControladorPrincipal implements ActionListener{
     vistaBatalla vb;
     vistaDespliegue vd;
     vistaInvocacion vi;
+    vistaRotaciones vRot;
+    
+    ///controladores////
     ControladorLogin contLogin;
+    ControladorDespliegue cd;
+    ControladorInvocacion ci;
+    
     Jugador jug;
     Accion ac;
     Tablero tab;
-    ControladorDespliegue cd;
-    ControladorInvocacion ci;
+    
 
     /**
      */
@@ -76,6 +83,10 @@ public class ControladorPrincipal implements ActionListener{
         this.vi = new vistaInvocacion();
         this.vi.setVisible(false);
         this.vi.setListenerInvocacion(this);
+        this.vRot = new vistaRotaciones();
+        this.vRot.setVisible(false);
+        this.vRot.agregarListener(this);
+        
     }
     @Override
     public void actionPerformed(ActionEvent e){
@@ -121,6 +132,40 @@ public class ControladorPrincipal implements ActionListener{
               this.vd.setVisible(true);
               this.vi.setVisible(false);
           }
+           ////botones de rotacion segun despliegue////
+          
+          if(vd.getjButton1() == (JButton)e.getSource()){
+              this.vRot.setVisible(true);
+          }
+          
+          if(vd.getjButton2() == (JButton)e.getSource()){
+              this.vRot.setVisible(true);
+          }
+          if(vd.getjButton3() == (JButton)e.getSource()){
+              this.vRot.setVisible(true);
+          }
+          if(vd.getjButton4() == (JButton)e.getSource()){
+              this.vRot.setVisible(true);
+          }
+          if(vd.getjButton5() == (JButton)e.getSource()){
+              this.vRot.setVisible(true);
+          }
+          if(vd.getjButton6() == (JButton)e.getSource()){
+              this.vRot.setVisible(true);
+          }
+          if(vd.getjButton7() == (JButton)e.getSource()){
+              this.vRot.setVisible(true);
+          }
+          if(vd.getjButton8() == (JButton)e.getSource()){
+              this.vRot.setVisible(true);
+          }
+          if(vd.getjButton9() == (JButton)e.getSource()){
+              this.vRot.setVisible(true);
+          }
+          if(vd.getjButton10() == (JButton)e.getSource()){
+              this.vRot.setVisible(true);
+          }
+   
           //Cambio de imagen del dado con su resultado.
           //Dado1:
           if(vb.getBoton1() == (JButton)e.getSource()){

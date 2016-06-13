@@ -16,6 +16,7 @@ public class vistaPuzzleDeDados extends javax.swing.JFrame {
      */
     public vistaPuzzleDeDados() {
         initComponents();
+        this.setLocationRelativeTo(null);//vista aparece al medio de la pantalla
     }
 
     /**
