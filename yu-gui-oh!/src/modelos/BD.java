@@ -7,10 +7,8 @@ package modelos;
 
 /**
  *
- * @author franc
+ * @author Morris
  */
-public class ElementoEnElCampo {
-    //posicion en matrices
-    private int[][] posicion;
-    private String nombre;
+public class BD {
+    
 }

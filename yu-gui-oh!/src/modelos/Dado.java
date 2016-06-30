@@ -7,6 +7,8 @@ package modelos;
 import java.net.URL;
 import java.util.Random;
 import javax.swing.ImageIcon;
+import modelos.Criatura;
+
 /**
  *
  * @author franc
@@ -19,6 +21,7 @@ public class Dado {
     private String nombreCriatura;
     private int numeroDeCara;
     private ImageIcon imagenDado;
+    private Criatura criatura;
     
     
     //contructores para objeto dado:
@@ -27,6 +30,7 @@ public class Dado {
         this.cara = cara;
         this.camino = camino;
         this.nombreCriatura = nombreCriatura;
+        this.criatura = criatura;
     } 
     public Dado(){} //constructor vacio
     

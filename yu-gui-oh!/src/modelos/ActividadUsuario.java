@@ -7,10 +7,10 @@ package modelos;
 
 /**
  *
- * @author franc
+ * @author Morris
  */
-public class ElementoEnElCampo {
-    //posicion en matrices
-    private int[][] posicion;
-    private String nombre;
+//esta clase contendrá metodo static llamado sin necesiadad de instanciar la clase
+//y que abribrá o creará txt con print de acciones del usuario
+public class ActividadUsuario {
+    
 }

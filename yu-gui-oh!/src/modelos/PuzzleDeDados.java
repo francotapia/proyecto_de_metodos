@@ -5,6 +5,7 @@
  */
 package modelos;
 
+import modelos.Dado;
 /**
  *
  * @author franc
@@ -12,6 +13,7 @@ package modelos;
 public class PuzzleDeDados {
     
     private int cantidad;
+    private Dado[][] dados;
     
     public int usarDados(){
         return cantidad;
