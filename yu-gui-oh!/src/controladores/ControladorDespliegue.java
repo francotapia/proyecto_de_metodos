@@ -9,9 +9,8 @@ package controladores;
 import java.awt.event.ActionEvent;
 import vistas.vistaDespliegue;
 import modelos.Tablero;
-import controladores.ControladorPrincipal;
 import java.awt.event.ActionListener;
-import vistas.vistaBatalla;
+import javax.swing.JButton;
 
 
 /**
@@ -22,15 +21,19 @@ public class ControladorDespliegue implements ActionListener {
     
     private vistaDespliegue vd;
     private Tablero terr;
-    private ControladorPrincipal cp;
+    private ControladorInvocacion ci;
     private ControladorBatalla cb;
     
+    public ControladorDespliegue(){
+        this.vd = new vistaDespliegue();
+        this.verVista(ci);
+    }
     public vistaDespliegue getVistaDespliegue(){
         return this.vd;
     }
     
-    public void verVista (ControladorPrincipal cp){
-        this.cp = cp;
+    public void verVista (ControladorInvocacion ci){
+        this.ci = ci;
         this.vd = new vistaDespliegue();
         this.vd.setVisible(true);
         this.vd.agregarListener(this);
@@ -38,9 +41,37 @@ public class ControladorDespliegue implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+        if(vd.getjButton1() == (JButton)e.getSource()){
+              ControladorRotaciones cr = new ControladorRotaciones();
+          }
+          if(vd.getjButton2() == (JButton)e.getSource()){
+              ControladorRotaciones cr = new ControladorRotaciones();
+          }
+          if(vd.getjButton3() == (JButton)e.getSource()){
+              ControladorRotaciones cr = new ControladorRotaciones();
+          }
+          if(vd.getjButton4() == (JButton)e.getSource()){
+              ControladorRotaciones cr = new ControladorRotaciones();
+          }
+          if(vd.getjButton5() == (JButton)e.getSource()){
+              ControladorRotaciones cr = new ControladorRotaciones();
+          }
+          if(vd.getjButton6() == (JButton)e.getSource()){
+              ControladorRotaciones cr = new ControladorRotaciones();
+          }
+          if(vd.getjButton7() == (JButton)e.getSource()){
+              ControladorRotaciones cr = new ControladorRotaciones();
+          }
+          if(vd.getjButton8() == (JButton)e.getSource()){
+              ControladorRotaciones cr = new ControladorRotaciones();
+          }
+          if(vd.getjButton9() == (JButton)e.getSource()){
+              ControladorRotaciones cr = new ControladorRotaciones();
+          }
+          if(vd.getjButton10() == (JButton)e.getSource()){
+              ControladorRotaciones cr = new ControladorRotaciones();
+          }
+    }    
 }
 
     

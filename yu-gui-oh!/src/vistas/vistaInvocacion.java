@@ -201,7 +201,7 @@ public class vistaInvocacion extends javax.swing.JFrame {
         return this.comboN4;
     }
     //Listeners:
-    public void setListenerInvocacion(ActionListener al){
+    public void agregarListener(ActionListener al){
         this.botonAceptar.addActionListener(al);
         this.comboN1.addActionListener(al);
         this.comboN2.addActionListener(al);
