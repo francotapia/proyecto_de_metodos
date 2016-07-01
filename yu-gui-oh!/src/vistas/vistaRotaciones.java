@@ -42,16 +42,16 @@ public class vistaRotaciones extends javax.swing.JFrame {
 
         jPanel1.setLayout(new java.awt.GridLayout(2, 2));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Desplegar/Rotaciones/Despliegue 1.1.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Despliegue/Rotaciones/Despliegue 1.1.png"))); // NOI18N
         jPanel1.add(jButton1);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Desplegar/Rotaciones/Despliegue 1.2.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Despliegue/Rotaciones/Despliegue 1.2.png"))); // NOI18N
         jPanel1.add(jButton2);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Desplegar/Rotaciones/Despliegue 1.4.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Despliegue/Rotaciones/Despliegue 1.4.png"))); // NOI18N
         jPanel1.add(jButton4);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Desplegar/Rotaciones/Despliegue 1.3.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Despliegue/Rotaciones/Despliegue 1.3.png"))); // NOI18N
         jPanel1.add(jButton3);
 
         getContentPane().add(jPanel1);

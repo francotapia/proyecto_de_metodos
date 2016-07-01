@@ -8,9 +8,9 @@ package controladores;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.Icon;
+import javax.swing.JButton;
 import vistas.vistaBatalla;
 import vistas.vistaInvocacion;
-import modelos.Accion;
 
 
 /**
@@ -21,24 +21,27 @@ public class ControladorInvocacion implements ActionListener{
     
     private vistaBatalla vb;
     private vistaInvocacion vi;
-    private ControladorPrincipal cp;
+    private ControladorBatalla cb;
     
+    public ControladorInvocacion(){
+        this.vi = new vistaInvocacion();
+        this.verVistaInvocacion(cb);
+    }
     public vistaInvocacion getvistaInvocacion(){
         return this.vi;
     }
-     public void verVistaInvocacion (ControladorPrincipal cp){
-        this.cp = cp;
+     public void verVistaInvocacion (ControladorBatalla cb){
+        this.cb = cb;
         this.vi = new vistaInvocacion();
         this.vi.setVisible(true);
-        this.vi.setListenerInvocacion(this);
+        this.vi.agregarListener(this);
     }
-    
-     
-     
-     
+   
     @Override
-    public void actionPerformed(ActionEvent ae) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+    public void actionPerformed(ActionEvent e) {
+        if(vi.getBotonAceptar() == (JButton)e.getSource()){ //mostrar vista despliegue desde v.invocacion
+            vi.setVisible(false);
+            ControladorDespliegue cd = new ControladorDespliegue();
+        }
+    }   
 }

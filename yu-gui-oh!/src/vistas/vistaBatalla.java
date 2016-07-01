@@ -478,7 +478,6 @@ public class vistaBatalla extends javax.swing.JFrame {
         for (int x = 0;x < filas; x++){
             for (int y = 0;y < columnas; y++){
                 matriz[x][y] = new JButton();
-                matriz[x][y] = new  ControladorBatalla(45*columnas,35*filas,55,45);
                 jPanel1.add(matriz[x][y]);  
                 
             }

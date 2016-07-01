@@ -11,9 +11,8 @@ package modelos;
  */
 public class Espacio {
     
-    private boolean disponible;//quizas es booleano :3
-    //private int espacioDisponible;
-    //private int espacioNoDisponible;
+     private boolean disponible;
+
     
     public boolean habilitarEspacio(){
         return disponible;

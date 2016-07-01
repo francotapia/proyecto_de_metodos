@@ -5,7 +5,6 @@
  */
 package modelos;
 
-import modelos.Dado;
 /**
  *
  * @author franc

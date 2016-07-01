@@ -8,6 +8,7 @@ package controladores;
 import java.awt.event.ActionEvent;
 import vistas.vistaMenu;
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
 
 /**
  *
@@ -16,21 +17,31 @@ import java.awt.event.ActionListener;
 public class ControladorMenu implements ActionListener{
     
     private vistaMenu vm;
-    private ControladorPrincipal cp;
+    private ControladorLogin cl;
     
     public vistaMenu getvistaMenu(){
         return this.vm;
     }
-     public void verVista (ControladorPrincipal cp){
-        this.cp = cp;
+    public ControladorMenu(){
+        this.vm = new vistaMenu();
+        this.verVista(cl);
+    }
+     public void verVista (ControladorLogin cl){
+        this.cl = cl;
         this.vm = new vistaMenu();
         this.vm.setVisible(true);
         this.vm.agregarListener(this);
      }
 
     @Override
-    public void actionPerformed(ActionEvent ae) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+    public void actionPerformed(ActionEvent e) {
+        if(vm.getBoton2() == (JButton)e.getSource()){
+           this.vm.setVisible(false);
+           ControladorMenuB cmb = new ControladorMenuB(); 
+        }
+        if(vm.getBoton1() == (JButton)e.getSource()){
+           this.vm.setVisible(false);
+           ControladorPerfil cp = new ControladorPerfil();
+          }
+    } 
 }

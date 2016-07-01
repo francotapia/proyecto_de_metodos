@@ -11,6 +11,7 @@ package modelos;
  */
 public class ElementoEnElCampo {
     //posicion en matrices
-    private int[][] posicion;
     private String nombre;
+    private int[][] posicion;
+   
 }

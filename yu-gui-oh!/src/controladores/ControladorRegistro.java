@@ -17,13 +17,17 @@ import java.awt.event.ActionListener;
 public class ControladorRegistro implements ActionListener {
     
     private vistaRegistro vr;
-    private ControladorPrincipal cp;
+    private ControladorLogin cl;
     
+    public ControladorRegistro(){
+        this.vr = new vistaRegistro();
+        this.verVista(cl);
+    }
     public vistaRegistro getvistaRegistro(){
         return this.vr;
     }
-    public void verVista (ControladorPrincipal cp){
-        this.cp = cp;
+    public void verVista (ControladorLogin cl){
+        this.cl = cl;
         this.vr = new vistaRegistro();
         this.vr.setVisible(true);
         this.vr.agregarListener(this);

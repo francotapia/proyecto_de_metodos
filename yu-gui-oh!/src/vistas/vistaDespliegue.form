@@ -50,7 +50,7 @@
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/Desplegar/Despliegue 1.1.png"/>
+              <Image iconType="3" name="/Imagenes/Despliegue/Despliegue 1.1.png"/>
             </Property>
           </Properties>
           <Events>
@@ -60,63 +60,63 @@
         <Component class="javax.swing.JButton" name="jButton2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/Desplegar/Despliegue 2.1.png"/>
+              <Image iconType="3" name="/Imagenes/Despliegue/Despliegue 2.1.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton3">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/Desplegar/Despliegue 3.1.png"/>
+              <Image iconType="3" name="/Imagenes/Despliegue/Despliegue 3.1.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton4">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/Desplegar/Despliegue 4.1.png"/>
+              <Image iconType="3" name="/Imagenes/Despliegue/Despliegue 4.1.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton5">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/Desplegar/Despliegue 5.1.png"/>
+              <Image iconType="3" name="/Imagenes/Despliegue/Despliegue 5.1.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton6">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/Desplegar/Despliegue 6.1.png"/>
+              <Image iconType="3" name="/Imagenes/Despliegue/Despliegue 6.1.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton7">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/Desplegar/Despliegue 7.1.png"/>
+              <Image iconType="3" name="/Imagenes/Despliegue/Despliegue 7.1.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton8">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/Desplegar/Despliegue 8.1.png"/>
+              <Image iconType="3" name="/Imagenes/Despliegue/Despliegue 8.1.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton9">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/Desplegar/Despliegue 9.1.png"/>
+              <Image iconType="3" name="/Imagenes/Despliegue/Despliegue 9.1.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton10">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/Desplegar/Despliegue 10.1.png"/>
+              <Image iconType="3" name="/Imagenes/Despliegue/Despliegue 10.1.png"/>
             </Property>
           </Properties>
         </Component>

@@ -11,6 +11,7 @@ public class Jugador {
     private String usuario;
     private String contraseña;
     private int puntaje;
+    private PuzzleDeDados puzzle;
     
     
     //Constructores de la clase

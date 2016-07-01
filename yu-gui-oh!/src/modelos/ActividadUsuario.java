@@ -7,10 +7,10 @@ package modelos;
 
 /**
  *
- * @author Morris
+ * @author sebastian
  */
-//esta clase contendrá metodo static llamado sin necesiadad de instanciar la clase
-//y que abribrá o creará txt con print de acciones del usuario
+//tiene metodo static, que es llamado despues de cada accion del usuario
+//crea un txt y agregar el print de la accion
 public class ActividadUsuario {
     
 }
