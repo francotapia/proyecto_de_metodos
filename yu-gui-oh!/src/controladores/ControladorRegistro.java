@@ -6,7 +6,7 @@
 package controladores;
 
 import java.awt.event.ActionEvent;
-import modelos.Jugador;
+import modelos.Registro;
 import vistas.vistaRegistro;
 import java.awt.event.ActionListener;
 
@@ -16,26 +16,38 @@ import java.awt.event.ActionListener;
  */
 public class ControladorRegistro implements ActionListener {
     
+    private Registro mR;
     private vistaRegistro vr;
     private ControladorLogin cl;
     
-    public ControladorRegistro(){
-        this.vr = new vistaRegistro();
-        this.verVista(cl);
-    }
-    public vistaRegistro getvistaRegistro(){
-        return this.vr;
-    }
     public void verVista (ControladorLogin cl){
         this.cl = cl;
+        this.mR = new Registro();
         this.vr = new vistaRegistro();
         this.vr.setVisible(true);
         this.vr.agregarListener(this);
     }
 
     @Override
-    public void actionPerformed(ActionEvent ae) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == vr.getBoton()) {
+            mR.setUser(vr.getFieldUsuario());
+            mR.setPassword(vr.getFieldPass());
+            mR.setPassword2(vr.getFieldPass2());
+            mR.setJefeTerreno(vr.getSeleccionJefeTerreno());
+            if (mR.registroCorrecto()) {
+                System.out.println("Usuario registrado correctamente");
+                this.vr.dispose();
+                this.cl.vl.setVisible(true);
+            }
+            else {
+                System.out.println("Fallo el registro");
+            }
+        }
+        else if (e.getSource() == vr.getBotonAtras()) {
+            this.vr.dispose();
+            this.cl.vl.setVisible(true);
+        }
     }
     
 }

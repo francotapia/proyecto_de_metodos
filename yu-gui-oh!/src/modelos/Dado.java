@@ -19,6 +19,7 @@ public class Dado {
     private String nombreCriatura;
     private int numeroDeCara;
     private ImageIcon imagenDado;
+    private Criatura criatura;
     
     
     //contructores para objeto dado:
@@ -27,6 +28,7 @@ public class Dado {
         this.cara = cara;
         this.camino = camino;
         this.nombreCriatura = nombreCriatura;
+        this.criatura = criatura;
     } 
     public Dado(){} //constructor vacio
     

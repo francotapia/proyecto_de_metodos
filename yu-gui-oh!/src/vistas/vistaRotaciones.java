@@ -34,35 +34,27 @@ public class vistaRotaciones extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new java.awt.GridLayout());
 
         jPanel1.setLayout(new java.awt.GridLayout(2, 2));
 
-        jButton1.setText("jButton1");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Despliegue/Rotaciones/Despliegue 1.1.png"))); // NOI18N
         jPanel1.add(jButton1);
 
-        jButton2.setText("jButton2");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Despliegue/Rotaciones/Despliegue 1.2.png"))); // NOI18N
         jPanel1.add(jButton2);
 
-        jButton3.setText("jButton3");
-        jPanel1.add(jButton3);
-
-        jButton4.setText("jButton4");
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Despliegue/Rotaciones/Despliegue 1.4.png"))); // NOI18N
         jPanel1.add(jButton4);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Despliegue/Rotaciones/Despliegue 1.3.png"))); // NOI18N
+        jPanel1.add(jButton3);
+
+        getContentPane().add(jPanel1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

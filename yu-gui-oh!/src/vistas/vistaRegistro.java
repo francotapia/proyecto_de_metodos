@@ -5,11 +5,9 @@
  */
 package vistas;
 
-import controladores.ControladorPrincipal;
-import controladores.ControladorRegistro;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
-import javax.swing.JComboBox;
+import javax.swing.JTextField;
 
 /**
  *
@@ -40,15 +38,15 @@ public class vistaRegistro extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        fieldUsuario = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        fieldPass = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        fieldPass2 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         JefesDTCB = new javax.swing.JComboBox<>();
         aceptarBT = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        botonAtras = new javax.swing.JButton();
 
         jScrollPane1.setViewportView(jTextPane1);
 
@@ -58,9 +56,9 @@ public class vistaRegistro extends javax.swing.JFrame {
 
         jLabel2.setText("Ingrese usuario:");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        fieldUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                fieldUsuarioActionPerformed(evt);
             }
         });
 
@@ -74,7 +72,7 @@ public class vistaRegistro extends javax.swing.JFrame {
 
         aceptarBT.setText("Registrarse");
 
-        jButton1.setText("Atras");
+        botonAtras.setText("Atras");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -87,7 +85,7 @@ public class vistaRegistro extends javax.swing.JFrame {
                         .addGap(58, 58, 58)
                         .addComponent(aceptarBT)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 186, Short.MAX_VALUE)
-                        .addComponent(jButton1)
+                        .addComponent(botonAtras)
                         .addGap(66, 66, 66))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -97,15 +95,15 @@ public class vistaRegistro extends javax.swing.JFrame {
                             .addComponent(jLabel2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(fieldUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(JefesDTCB, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
-                                .addComponent(jTextField2)))
+                                .addComponent(fieldPass2, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+                                .addComponent(fieldPass)))
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(188, 188, 188)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -116,17 +114,17 @@ public class vistaRegistro extends javax.swing.JFrame {
                 .addGap(46, 46, 46)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(4, 4, 4)
-                        .addComponent(jTextField2)))
+                        .addComponent(fieldPass)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldPass2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -134,7 +132,7 @@ public class vistaRegistro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(aceptarBT)
-                    .addComponent(jButton1))
+                    .addComponent(botonAtras))
                 .addGap(24, 24, 24))
         );
 
@@ -164,9 +162,9 @@ public class vistaRegistro extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void fieldUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_fieldUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -176,7 +174,10 @@ public class vistaRegistro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> JefesDTCB;
     private javax.swing.JButton aceptarBT;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton botonAtras;
+    private javax.swing.JTextField fieldPass;
+    private javax.swing.JTextField fieldPass2;
+    private javax.swing.JTextField fieldUsuario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -185,19 +186,30 @@ public class vistaRegistro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextPane jTextPane1;
     // End of variables declaration//GEN-END:variables
 
     public JButton getBoton(){
       return this.aceptarBT;
     }
-    public JComboBox getComboboxJt(){
-      return this.JefesDTCB;
+    public int getSeleccionJefeTerreno() {
+        return this.JefesDTCB.getSelectedIndex()+1;
+    }
+    public JButton getBotonAtras(){
+      return this.botonAtras;
+    }
+
+    public String getFieldUsuario() {
+        return fieldUsuario.getText();
+    }
+    public String getFieldPass() {
+        return fieldPass.getText();
+    }
+    public String getFieldPass2() {
+        return fieldPass2.getText();
     }
     public void agregarListener(ActionListener al){
+        this.botonAtras.addActionListener(al);
         this.aceptarBT.addActionListener(al);
         this.JefesDTCB.addActionListener(al);
     }  

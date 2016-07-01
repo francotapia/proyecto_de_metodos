@@ -1,6 +1,10 @@
 
 package modelos;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 /**
  *
  * @author franc
@@ -11,12 +15,15 @@ public class Jugador {
     private String usuario;
     private String contraseña;
     private int puntaje;
+    private int jefeTerreno;
+    private PuzzleDeDados puzzle;
     
     
     //Constructores de la clase
-    public Jugador(String jug, String cont){
+    public Jugador(String jug, String cont, int jTerreno){
         this.usuario = jug;
-        this.contraseña = cont; 
+        this.contraseña = cont;
+        this.jefeTerreno = jTerreno;
     }
     public Jugador(){
         this.usuario = null;
@@ -46,23 +53,54 @@ public class Jugador {
     }
    
     
-    public boolean ingresar (String usuario, String contraseña){
-    //Condición para reconocer si el usuario y contraseña son correctos
-    if(usuario.equals("antonio") && contraseña.equals("andres")){
-        return true;
-            
-    }else{
-        return false;
-    }
-    }
-    
-    public boolean existe(String usuario){
-    //Verifica que el usuario esta registrado    
-        if(usuario.equals(this.usuario)){
-            return true;
-        }else{
-            return false;
+    public Jugador ingresar (String usuario, String contraseña){
+        //Condición para reconocer si el usuario y contraseña son correctos
+        BD conexionBD = new BD();
+        try {
+            conexionBD.conectar();
+            Statement stmt = conexionBD.crearConsulta();
+            final String consulta = "SELECT USUARIO,PASSWORD,JEFE_TERRENO FROM USUARIOS WHERE USUARIO = '" + usuario + "' AND PASSWORD='" + contraseña + "' AND ES_HUMANO=TRUE";
+
+            ResultSet resultados = stmt.executeQuery(consulta);
+
+            if (resultados.next()) {
+                String nombre = resultados.getString("USUARIO");
+                String password = resultados.getString("PASSWORD");
+                int jefeTerr = resultados.getInt("JEFE_TERRENO");
+                return new Jugador(nombre, password, jefeTerr);
+            }
+            else {
+                return null;
+            }
+        }
+        catch (SQLException ex) {
+                System.err.println("Base de datos no conectada");
+                return null;
         }
     }
     
+    public boolean existeUsuario(String usuario) {
+        //Verifica que el usuario esta registrado
+        BD conexionBD = new BD();
+        try {
+            conexionBD.conectar();
+            Statement stmt = conexionBD.crearConsulta();
+            final String consulta = "SELECT USUARIO FROM USUARIOS WHERE USUARIO = '" + usuario + "' AND ES_HUMANO=TRUE";
+
+            ResultSet resultados = stmt.executeQuery(consulta);
+
+            if (resultados.next()) {
+                    return true;
+                }
+            else {
+                    return false;
+                }
+            }
+        catch (SQLException ex) {
+                System.err.println("Base de datos no conectada");
+                return false;
+        }
+    }
+    
+
 }

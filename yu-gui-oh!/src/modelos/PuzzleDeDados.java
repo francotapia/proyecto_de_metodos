@@ -12,6 +12,7 @@ package modelos;
 public class PuzzleDeDados {
     
     private int cantidad;
+    private Dado[][] dados;
     
     public int usarDados(){
         return cantidad;

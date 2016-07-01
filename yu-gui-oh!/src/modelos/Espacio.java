@@ -11,12 +11,11 @@ package modelos;
  */
 public class Espacio {
     
-    //quizas es booleano :3
-    private int espacioDisponible;
-    private int espacioNoDisponible;
+     private boolean disponible;
+
     
-    public int habilitarEspacio(){
-        return espacioDisponible;
+    public boolean habilitarEspacio(){
+        return disponible;
     // con este metodo se habilitan los espacios que no lo estaban a medida 
     // que avanza el juego.
     }
