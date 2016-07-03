@@ -5,6 +5,11 @@
  */
 package modelos;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import otros.BD;
+
 /**
  *
  * @author franc
@@ -20,5 +25,5 @@ public class PuzzleDeDados {
     // se elige la cantidad de dados a lanzar.
     }
 
-    
+   
 }

@@ -616,7 +616,7 @@ public class vistaBatalla extends javax.swing.JFrame {
         this.moverBT.addActionListener(al);
         this.trampaBT.addActionListener(al);
         this.turnoBT.addActionListener(al);
-        //NO SIRVE PERO NO BORRAR (AUN)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //NO SIRVE PERO NO BORRAR (AUN)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         //Ciclo for que permite escucha a cada botón del tablero
         for (int i=0;i<15;i++) { //por cada fila del tablero
             for (int j=0;j<15;j++) { //por cada elemento de cada fila

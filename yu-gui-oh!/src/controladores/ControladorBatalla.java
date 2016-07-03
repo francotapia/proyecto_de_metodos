@@ -11,6 +11,7 @@ import javax.swing.JButton;
 import modelos.Tablero;
 import modelos.Accion;
 import modelos.Dado;
+import modelos.Jugador;
 
 /**
  *
@@ -21,14 +22,8 @@ public class ControladorBatalla implements ActionListener{
     private vistaBatalla vb;
     private ControladorMenuB cmb;
     private Tablero tab;
-    Accion ac;
+    Accion ac;  
     
-    //public int[] Listener (vistaBatalla vb){
-      
-    //} GridView
-    
-  
-
     public ControladorBatalla() {
         this.vb = new vistaBatalla();
         this.ac = new Accion();

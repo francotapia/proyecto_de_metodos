@@ -5,6 +5,7 @@
  */
 package modelos;
 
+import otros.BD;
 import java.sql.Statement;
 
 /**

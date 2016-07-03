@@ -1,6 +1,7 @@
 
 package modelos;
 
+import otros.BD;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -17,7 +18,6 @@ public class Jugador {
     private int puntaje;
     private int jefeTerreno;
     private PuzzleDeDados puzzle;
-    
     
     //Constructores de la clase
     public Jugador(String jug, String cont, int jTerreno){
