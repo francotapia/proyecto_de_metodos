@@ -412,8 +412,11 @@ public class vistaBatalla extends javax.swing.JFrame {
     }//GEN-LAST:event_invocarBTActionPerformed
 
     /**
+     *
      * @param args the command line arguments
      */
+     
+   // System.out.println(coordenadas[0]);   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton atacarBT;
@@ -471,17 +474,17 @@ public class vistaBatalla extends javax.swing.JFrame {
     int filas = 15;
  
     //Método que genera un arreglo bidimensional de botones
-    public void generarBotones(){
+    public JButton[][] generarBotones(){
         this.matriz = new JButton [filas][columnas];
         JFrame v = new JFrame();
         jPanel1.setLayout(new GridLayout(filas,columnas));
         for (int x = 0;x < filas; x++){
             for (int y = 0;y < columnas; y++){
                 matriz[x][y] = new JButton();
-                jPanel1.add(matriz[x][y]);  
-                
+                jPanel1.add(matriz[x][y]);
             }
         }
+        return matriz;
     }
    
                              
@@ -621,6 +624,7 @@ public class vistaBatalla extends javax.swing.JFrame {
         for (int i=0;i<15;i++) { //por cada fila del tablero
             for (int j=0;j<15;j++) { //por cada elemento de cada fila
                 this.matriz[i][j].addActionListener(al); //escuchar elementos(botones)
+                
             }
         }
     }
