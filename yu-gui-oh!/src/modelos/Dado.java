@@ -59,6 +59,9 @@ public class Dado {
         return cara;
     // metodo que dice a que corresponde la cara que se obtuvo al azar.
     }
+    public static int[][] getForma1(){
+        return forma1;
+    }
 
     public ImageIcon ImagenesResultados(int DadoR){
         String urlIDado = "\\Imagenes\\carasDados\\"+Integer.toString(DadoR)+".png";

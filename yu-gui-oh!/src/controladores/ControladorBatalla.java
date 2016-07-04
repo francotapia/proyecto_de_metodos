@@ -1,8 +1,5 @@
 package controladores;
 
-
-
-
 import java.awt.event.ActionEvent;
 import vistas.vistaBatalla;
 import java.awt.event.ActionListener;
@@ -12,6 +9,7 @@ import modelos.Tablero;
 import modelos.Accion;
 import modelos.Dado;
 import modelos.Jugador;
+import modelos.Turno;
 
 /**
  *
@@ -22,7 +20,8 @@ public class ControladorBatalla implements ActionListener{
     private vistaBatalla vb;
     private ControladorMenuB cmb;
     private Tablero tab;
-    Accion ac;  
+    Accion ac;
+    Turno turno;
     
     public ControladorBatalla() {
         this.vb = new vistaBatalla();
@@ -42,7 +41,17 @@ public class ControladorBatalla implements ActionListener{
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e) { //accede y printea la coordenada
+        for(int y = 0; y<15; y++){
+            for(int x=0; x<15; x++){
+                if(vb.getMatriz()[x][y]==e.getSource()){
+                    System.out.println("x="+x+",y="+y);
+                    vb.colorear(x, y, Dado.getForma1());
+                }
+            }
+        }
+        
+       
         //Cambio de imagen del dado con su resultado.
           //Dado1:
           if(vb.getBoton1() == (JButton)e.getSource()){
@@ -82,7 +91,6 @@ public class ControladorBatalla implements ActionListener{
                       vb.activarTram();
                   }
               }
-
           }
           //Dado2:
           if(vb.getBoton2() == (JButton)e.getSource()){
@@ -124,7 +132,6 @@ public class ControladorBatalla implements ActionListener{
                       vb.activarTram();
                   }
               }
-
           }
           //Dado3:
           if(vb.getBoton3() == (JButton)e.getSource()){

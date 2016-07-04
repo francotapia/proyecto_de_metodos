@@ -33,7 +33,6 @@ public class vistaBatalla extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         this.generarBotones();
     }
-
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -416,7 +415,7 @@ public class vistaBatalla extends javax.swing.JFrame {
      * @param args the command line arguments
      */
      
-   // System.out.println(coordenadas[0]);   
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton atacarBT;
@@ -486,7 +485,6 @@ public class vistaBatalla extends javax.swing.JFrame {
         }
         return matriz;
     }
-   
                              
 /////////////////////////////////////////
     
@@ -619,14 +617,22 @@ public class vistaBatalla extends javax.swing.JFrame {
         this.moverBT.addActionListener(al);
         this.trampaBT.addActionListener(al);
         this.turnoBT.addActionListener(al);
-        //NO SIRVE PERO NO BORRAR (AUN)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        //Ciclo for que permite escucha a cada botón del tablero
-        for (int i=0;i<15;i++) { //por cada fila del tablero
-            for (int j=0;j<15;j++) { //por cada elemento de cada fila
-                this.matriz[i][j].addActionListener(al); //escuchar elementos(botones)
-                
+        for (int y=0;y<15;y++) { //por cada fila del tablero
+            for (int x=0;x<15;x++) { //por cada elemento de cada fila
+                this.matriz[x][y].addActionListener(al); //escuchar elementos(botones)
             }
         }
     }
-
+    public JButton[][] getMatriz(){
+        return this.matriz;
+    }
+    public void colorear(int x, int y, int[][] matriz){ //colorea boton vista
+            this.matriz[matriz[0][0]+x][matriz[0][1]+y].setBackground(Color.pink);
+            this.matriz[matriz[1][0]+x][matriz[1][1]+y].setBackground(Color.pink);
+            this.matriz[matriz[2][0]+x][matriz[2][1]+y].setBackground(Color.pink);
+            this.matriz[matriz[3][0]+x][matriz[3][1]+y].setBackground(Color.pink);
+            this.matriz[matriz[4][0]+x][matriz[4][1]+y].setBackground(Color.pink);
+            this.matriz[matriz[5][0]+x][matriz[5][1]+y].setBackground(Color.pink);
+            this.matriz[matriz[6][0]+x][matriz[6][1]+y].setBackground(Color.pink);
+    }
 }
