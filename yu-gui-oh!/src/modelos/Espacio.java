@@ -10,15 +10,46 @@ package modelos;
  * @author franc
  */
 public class Espacio {
+    private String dueno;
+    private final int posicionX;
+    private final int posicionY;
+    private boolean disponible;
+    private Criatura criatura;
+    public Trampa trampa;
     
-     private boolean disponible;
-
-    
-    public boolean habilitarEspacio(){
-        return disponible;
-    // con este metodo se habilitan los espacios que no lo estaban a medida 
-    // que avanza el juego.
+    //Constructor
+    public Espacio(int x, int y){
+        this.posicionX = x;
+        this.posicionY = y;
+        this.dueno = null;
+        this.criatura = null;
+        this.trampa = null;
     }
-
     
+    //Metodos
+    
+    public boolean hayTerreno() { //comprueba si el terreno tiene despliegue
+        return dueno != null;
+    }
+    //gets
+    public String getDuneo(){
+        return this.dueno;
+    }
+    public int getPosicionX(){
+        return this.posicionX;
+    }
+    public int getPosicionY(){
+        return this.posicionY;
+    }
+    public Criatura getCriatura(){
+        return this.criatura;
+    }
+    public Trampa getTrampa(){
+       return this.trampa;
+    }
+    
+    //sets
+    public void setDueno(String dueno){ //da dueño
+        this.dueno = dueno;
+    }
 }

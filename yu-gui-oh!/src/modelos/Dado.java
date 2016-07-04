@@ -20,10 +20,11 @@ public class Dado {
     private int numeroDeCara;
     private ImageIcon imagenDado;
     private Criatura criatura;
-    
-    
+    private static final int[][] forma1 = {{0,0},{0,1},{0,2},{1,1},{2,1},{3,1}};
+
+
     //contructores para objeto dado:
-    public Dado (int Caras, String cara, int camino, String nombreCriatura){
+    public Dado (int Caras, String cara, int camino, String nombreCriatura, Criatura criatura){
         this.cantidadCaras = Caras;
         this.cara = cara;
         this.camino = camino;

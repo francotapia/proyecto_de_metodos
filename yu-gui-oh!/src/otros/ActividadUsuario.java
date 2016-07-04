@@ -7,6 +7,9 @@ package otros;
 
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  *
@@ -15,16 +18,19 @@ import java.io.File;
 //tiene metodo static, que es llamado despues de cada accion del usuario
 //crea un txt y agregar el print de la accion
 public class ActividadUsuario {
-    String ruta = ""; //url de archivo
-    File archivo = new File(ruta); //instancia archivo
-    BufferedWriter bw; //escribe el archivo
- //   if(archivo.exists()){
-   //     bw = new BufferedWriter(new FileWriter(archivo));
-     //   bw.write("el archivo txt ya esta creado");
-   // }else{
-     //   bw = new BufferedWriter(new FileWriter(archivo));
-       // bw.write("se acaba de crear txt");
-
-    //}
-    
+    public static void actividadUsuario(String texto){
+        File ActividadUsuario = new File("log.txt");
+            try{
+                if(ActividadUsuario.exists()==false){
+                    System.out.println("El archivo no existe, se creara uno...");
+                    ActividadUsuario.createNewFile();
+                }
+                PrintWriter salidaDeArchivo = new PrintWriter(new FileWriter(ActividadUsuario, true));
+                salidaDeArchivo.append(texto);
+                salidaDeArchivo.append(System.lineSeparator());
+                salidaDeArchivo.close();
+            }catch(IOException e){
+                System.out.println("No se puede escribir en el archivo");
+            }
+    }
 }
