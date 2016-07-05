@@ -7,13 +7,14 @@ package modelos;
 import java.net.URL;
 import java.util.Random;
 import javax.swing.ImageIcon;
+import otros.BD;
 /**
  *
  * @author franc
  */
 public class Dado {
     
-    private int cantidadCaras;
+    private String cara6;
     private String cara;
     private int camino; //tipos de caminos que se habilitan, como matrices.
     private String nombreCriatura;
@@ -24,8 +25,8 @@ public class Dado {
 
 
     //contructores para objeto dado:
-    public Dado (int Caras, String cara, int camino, String nombreCriatura, Criatura criatura){
-        this.cantidadCaras = Caras;
+    public Dado (String cara6, String cara, int camino, String nombreCriatura, Criatura criatura){
+        this.cara6 = cara6;
         this.cara = cara;
         this.camino = camino;
         this.nombreCriatura = nombreCriatura;
@@ -35,7 +36,8 @@ public class Dado {
     
     public int lanzarDado(){
         Random rGenerador = new Random();
-        numeroDeCara = rGenerador.nextInt(5)+1;    
+        numeroDeCara = rGenerador.nextInt(6)+1;
+        System.out.println(numeroDeCara);
         return numeroDeCara;
         
     //metodo que obtiene una cara del dado al azar.
@@ -55,6 +57,9 @@ public class Dado {
         }
         if(numero == 5){
             this.cara = "Trampa";
+        }
+        if(numero == 6){
+            this.cara = cara6;
         }
         return cara;
     // metodo que dice a que corresponde la cara que se obtuvo al azar.

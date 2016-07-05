@@ -15,6 +15,10 @@ public class Turno {
     String dueno;
     Accion Accion;
     private ArrayList<Jugador> jugadores;
+    Jugador jugador1;
+    Jugador jugador2;
+    Jugador jugador3;
+    Jugador jugador4;
     
     public static int sumaTurno(){
         numeroTurno = numeroTurno + 1;
@@ -25,5 +29,33 @@ public class Turno {
         this.jugadores=jugadores;
         return jugadores;
     }    
+    
+    public void setArray2(Jugador jugadro1, Jugador jugador2){
+        ArrayList<Jugador> jugadores = new ArrayList<Jugador>(2);
+        jugadores.add(jugador1);
+        jugadores.add(jugador2);
+        System.out.println("jugador1="+jugador1.getUsuario());
+        System.out.println("jugador2="+jugador2.getUsuario());
+    }
+    public void setArray3(Jugador jugadro1, Jugador jugador2, Jugador jugador3){
+        ArrayList<Jugador> jugadores = new ArrayList<Jugador>(3);
+        jugadores.add(jugador1);
+        jugadores.add(jugador2);
+        jugadores.add(jugador3);
+        System.out.println("jugador1="+jugador1.getUsuario());
+        System.out.println("jugador2="+jugador2.getUsuario());
+        System.out.println("jugador3="+jugador3.getUsuario());
+    }
+    public void setArray4(Jugador jugadro1, Jugador jugador2, Jugador jugador3, Jugador jugador4){
+        ArrayList<Jugador> jugadores = new ArrayList<Jugador>(4);
+        jugadores.add(jugador1);
+        jugadores.add(jugador2);
+        jugadores.add(jugador3);
+        jugadores.add(jugador4);
+        System.out.println("jugador1="+jugador1.getUsuario());
+        System.out.println("jugador2="+jugador2.getUsuario());
+        System.out.println("jugador3="+jugador3.getUsuario());
+        System.out.println("jugador4="+jugador4.getUsuario());
+    }
 }
 

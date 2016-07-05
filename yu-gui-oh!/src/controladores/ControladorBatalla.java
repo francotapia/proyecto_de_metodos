@@ -21,6 +21,7 @@ public class ControladorBatalla implements ActionListener{
     private Tablero tab;
     Accion ac;
     Turno turno;
+    Jugador jugador;
     
     public ControladorBatalla(int n) {
         this.vb = new vistaBatalla();
@@ -30,17 +31,20 @@ public class ControladorBatalla implements ActionListener{
         if(n == 2){
             vb.setJefeDTerreno1("1");
             vb.setJefeDTerreno2("2");
+            //aqui deberia llamarse a setArray2
         }
         else if(n == 3){
             vb.setJefeDTerreno1("1");
             vb.setJefeDTerreno2("2");
             vb.setJefeDTerreno3("3");
+            //aqui deberia llamarse a setArray3
         }
         else {
             vb.setJefeDTerreno1("1");
             vb.setJefeDTerreno2("2");
             vb.setJefeDTerreno3("3");
             vb.setJefeDTerreno4("4");
+            //aqui deberia llamarse a setArray4
         }
     }
     
@@ -74,31 +78,31 @@ public class ControladorBatalla implements ActionListener{
               vb.setResultadoD1(nom1); //se inserta en textfield el resultado
               int cambio = ac.guardar(num1); //se guarda acción en contadro de acciones
               
-              if(num1 == 1){
+              if(nom1 == "Ataque"){
                   vb.setCantAtk(cambio);
                   if(ac.getAtaque() != 0){//verifica que el contador es distinto a cero.
                       vb.activarAtk();//activa el boton de accion.
                   }
               }
-              if(num1 == 2){
+              if(nom1 == "Invocacion"){
                   vb.setCantInv(cambio);
                   if(ac.getInvocacion() != 0){
                       vb.activarInv();
                   }
               }
-              if(num1 == 3){
+              if(nom1 == "Magia"){
                   vb.setCantMag(cambio);
                   if(ac.getMagia() != 0){
                       vb.activarMag();
                   }
               }
-              if(num1 == 4){
+              if(nom1 == "Movimiento"){
                   vb.setCantMov(cambio);
                   if(ac.getMovimiento() != 0){
                       vb.activarMov();
                   }
               }
-              if(num1 == 5){
+              if(nom1 == "Trampa"){
                   vb.setCantTram(cambio);
                   if(ac.getTrampa() != 0){
                       vb.activarTram();
@@ -115,31 +119,31 @@ public class ControladorBatalla implements ActionListener{
               vb.setResultadoD2(nom2);
               int cambio = ac.guardar(num2);
               
-              if(num2 == 1){
+              if(nom2 == "Ataque"){
                   vb.setCantAtk(cambio);
                   if(ac.getAtaque() != 0){//verifica que el contador es distinto a cero.
                       vb.activarAtk();//activa el boton de accion.
                   }
               }
-              if(num2 == 2){
+              if(nom2 == "Invocacion"){
                   vb.setCantInv(cambio);
                   if(ac.getInvocacion() != 0){
                       vb.activarInv();
                   }
               }
-              if(num2 == 3){
+              if(nom2 == "Magia"){
                   vb.setCantMag(cambio);
                   if(ac.getMagia() != 0){
                       vb.activarMag();
                   }
               }
-              if(num2 == 4){
+              if(nom2 == "Movimiento"){
                   vb.setCantMov(cambio);
                   if(ac.getMovimiento() != 0){
                       vb.activarMov();
                   }
               }
-              if(num2 == 5){
+              if(nom2 == "Trampa"){
                   vb.setCantTram(cambio);
                   if(ac.getTrampa() != 0){
                       vb.activarTram();
@@ -156,31 +160,31 @@ public class ControladorBatalla implements ActionListener{
               vb.setResultadoD3(nom3);
               int cambio = ac.guardar(num3);
               
-              if(num3 == 1){
+              if(nom3 == "Ataque"){
                   vb.setCantAtk(cambio);
                   if(ac.getAtaque() != 0){//verifica que el contador es distinto a cero.
                       vb.activarAtk();//activa el boton de accion.
                   }
               }
-              if(num3 == 2){
+              if(nom3 == "Invocacion"){
                   vb.setCantInv(cambio);
                   if(ac.getInvocacion() != 0){
                       vb.activarInv();
                   }
               }
-              if(num3 == 3){
+              if(nom3 == "Magia"){
                   vb.setCantMag(cambio);
                   if(ac.getMagia() != 0){
                       vb.activarMag();
                   }
               }
-              if(num3 == 4){
+              if(nom3 == "Movimiento"){
                   vb.setCantMov(cambio);
                   if(ac.getMovimiento() != 0){
                       vb.activarMov();
                   }
               }
-              if(num3 == 5){
+              if(nom3 == "Trampa"){
                   vb.setCantTram(cambio);
                   if(ac.getTrampa() != 0){
                       vb.activarTram();
@@ -198,31 +202,31 @@ public class ControladorBatalla implements ActionListener{
               vb.setResultadoD4(nom4);
               int cambio = ac.guardar(num4);
               
-              if(num4 == 1){
+              if(nom4 == "Ataque"){
                   vb.setCantAtk(cambio);
                   if(ac.getAtaque() != 0){//verifica que el contador es distinto a cero.
                       vb.activarAtk();//activa el boton de accion.
                   }
               }
-              if(num4 == 2){
+              if(nom4 == "Invocacion"){
                   vb.setCantInv(cambio);
                   if(ac.getInvocacion() != 0){
                       vb.activarInv();
                   }
               }
-              if(num4 == 3){
+              if(nom4 == "Magia"){
                   vb.setCantMag(cambio);
                   if(ac.getMagia() != 0){
                       vb.activarMag();
                   }
               }
-              if(num4 == 4){
+              if(nom4 == "Movimiento"){
                   vb.setCantMov(cambio);
                   if(ac.getMovimiento() != 0){
                       vb.activarMov();
                   }
               }
-              if(num4 == 5){
+              if(nom4 == "Trampa"){
                   vb.setCantTram(cambio);
                   if(ac.getTrampa() != 0){
                       vb.activarTram();

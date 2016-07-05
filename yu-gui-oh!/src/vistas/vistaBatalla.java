@@ -571,15 +571,19 @@ public class vistaBatalla extends javax.swing.JFrame {
     }
     public void setJefeDTerreno1(String nom){
         this.matriz[7][0].setText(nom);
+        this.matriz[7][0].setBackground(Color.red);
     }
     public void setJefeDTerreno2(String nom){
         this.matriz[7][14].setText(nom);
+        this.matriz[7][14].setBackground(Color.yellow);
     }
     public void setJefeDTerreno3(String nom){
         this.matriz[14][7].setText(nom);
+        this.matriz[14][7].setBackground(Color.BLUE);
     }
     public void setJefeDTerreno4(String nom){
         this.matriz[0][7].setText(nom);
+        this.matriz[0][7].setBackground(Color.GREEN);
     }
     
     //set para mostrar el resultado como texto.
