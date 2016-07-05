@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author Morris
  */
 public class Turno {
-    static int numeroTurno;
+    static int numeroTurno = 0;
     String dueno;
     Accion Accion;
     private ArrayList<Jugador> jugadores;
@@ -22,7 +22,12 @@ public class Turno {
     
     public static int sumaTurno(){
         numeroTurno = numeroTurno + 1;
-        return numeroTurno;
+        if(numeroTurno<5){
+            return numeroTurno;
+        }else{
+            numeroTurno=0;
+            return numeroTurno;
+        }
     }
     
     public ArrayList<Jugador> setJugadores(ArrayList<Jugador> jugadores){

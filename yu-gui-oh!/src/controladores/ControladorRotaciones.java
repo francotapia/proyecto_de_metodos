@@ -12,6 +12,7 @@ import controladores.ControladorPrincipal;
 import java.awt.event.ActionListener;
 import vistas.vistaBatalla;
 import vistas.vistaRotaciones;
+import modelos.Dado;
 
 /**
  *

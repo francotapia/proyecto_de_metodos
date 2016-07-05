@@ -5,6 +5,9 @@
  */
 package modelos;
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Random;
 import javax.swing.ImageIcon;
 import otros.BD;
@@ -77,4 +80,5 @@ public class Dado {
         //this.ImagenesResultados.setIcon(imagenDado);
       //imagenDado = new ImageIcon("\\Imagenes\\carasDados\\"+Integer.toString(DadoR)+".png");
     }
+    
 }
