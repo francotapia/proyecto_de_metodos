@@ -10,6 +10,7 @@ import modelos.Accion;
 import modelos.Dado;
 import modelos.Jugador;
 import modelos.Turno;
+import modelos.Espacio;
 
 /**
  *
@@ -19,9 +20,13 @@ public class ControladorBatalla implements ActionListener{
     
     private vistaBatalla vb;
     private Tablero tab;
+    private Espacio espacio;
     Accion ac;
     Turno turno;
-    Jugador jugador;
+    Jugador jugador1;
+    Jugador jugador2;
+    Jugador jugador3;
+    Jugador jugador4;
     
     public ControladorBatalla(int n) {
         this.vb = new vistaBatalla();
@@ -32,12 +37,22 @@ public class ControladorBatalla implements ActionListener{
             vb.setJefeDTerreno1("1");
             vb.setJefeDTerreno2("2");
             //aqui deberia llamarse a setArray2
+            Espacio espacioJT1 = new Espacio(7,0); //crea nuevo espacio con coordenadas del JT1
+            espacioJT1.setDueno(jugador1.getUsuario()); //da dueño al jefe de terreno
+            Espacio espacioJT2 = new Espacio(7,14);
+            espacioJT2.setDueno(jugador2.getUsuario());
         }
         else if(n == 3){
             vb.setJefeDTerreno1("1");
             vb.setJefeDTerreno2("2");
             vb.setJefeDTerreno3("3");
             //aqui deberia llamarse a setArray3
+            Espacio espacioJT1 = new Espacio(7,0); //crea nuevo espacio con coordenadas del JT1
+            espacioJT1.setDueno(jugador1.getUsuario()); //da dueño al jefe de terreno
+            Espacio espacioJT2 = new Espacio(7,14);
+            espacioJT2.setDueno(jugador2.getUsuario());
+            Espacio espacioJT3 = new Espacio(14,7);
+            espacioJT3.setDueno(jugador3.getUsuario());
         }
         else {
             vb.setJefeDTerreno1("1");
@@ -45,6 +60,14 @@ public class ControladorBatalla implements ActionListener{
             vb.setJefeDTerreno3("3");
             vb.setJefeDTerreno4("4");
             //aqui deberia llamarse a setArray4
+            Espacio espacioJT1 = new Espacio(7,0); //crea nuevo espacio con coordenadas del JT1
+            espacioJT1.setDueno(jugador1.getUsuario()); //da dueño al jefe de terreno
+            Espacio espacioJT2 = new Espacio(7,14);
+            espacioJT2.setDueno(jugador2.getUsuario());
+            Espacio espacioJT3 = new Espacio(14,7);
+            espacioJT3.setDueno(jugador3.getUsuario());
+            Espacio espacioJT4 = new Espacio(0,7);
+            espacioJT4.setDueno(jugador4.getUsuario());
         }
     }
     

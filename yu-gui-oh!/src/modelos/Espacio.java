@@ -25,7 +25,7 @@ public class Espacio {
         this.criatura = null;
         this.trampa = null;
     }
-    
+
     //Metodos
     
     public boolean hayTerreno() { //comprueba si el terreno tiene despliegue
