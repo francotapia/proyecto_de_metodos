@@ -19,7 +19,6 @@ public class ControladorLogin implements ActionListener{
     
     vistaLogin vl;
     Jugador jug;
-    ControladorPrincipal cp;
      //Se escucha a la vistaLogin
     public vistaLogin getvistaLogin(){
         return this.vl;
@@ -27,11 +26,10 @@ public class ControladorLogin implements ActionListener{
     public ControladorLogin(){ //constructor login para inicializar vistas
         this.jug = new Jugador("antonio", "andres", 1);
         this.vl = new vistaLogin();
-        this.verVista(cp);
+        this.verVista();
     }    
 
-    public void verVista(ControladorPrincipal cp){
-        this.cp = cp;
+    public void verVista(){
         this.vl.setVisible(true);
         this.vl.agregarListener(this);  
     }
@@ -42,7 +40,7 @@ public class ControladorLogin implements ActionListener{
             if(jug.ingresar(usuario, contraseña) != null){
                 vl.bienvenida(usuario);
                 this.vl.setVisible(false);
-                ControladorMenu cm = new ControladorMenu();  
+                ControladorMenu cm = new ControladorMenu(usuario);
             }
             else{
                 vl.errorContraseña(usuario);
@@ -52,6 +50,7 @@ public class ControladorLogin implements ActionListener{
             vl.errorUsuario(usuario);
             this.vl.setVisible(true);
         }
+        
     }
    
     @Override
@@ -59,12 +58,12 @@ public class ControladorLogin implements ActionListener{
         if(vl.getBoton1() == (JButton)e.getSource()){
              String usuario = vl.getUsuario();
              String contraseña = vl.getContraseña();
-             verificar(usuario,contraseña);    
+             verificar(usuario,contraseña); 
+             
         } 
         if(vl.getBoton2() == (JButton)e.getSource()){
             this.vl.setVisible(false);
             ControladorRegistro cr = new ControladorRegistro();
-            cr.verVista(this);
         }
     }
 }

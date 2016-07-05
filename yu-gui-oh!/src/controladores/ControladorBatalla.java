@@ -18,23 +18,36 @@ import modelos.Turno;
 public class ControladorBatalla implements ActionListener{
     
     private vistaBatalla vb;
-    private ControladorMenuB cmb;
     private Tablero tab;
     Accion ac;
     Turno turno;
     
-    public ControladorBatalla() {
+    public ControladorBatalla(int n) {
         this.vb = new vistaBatalla();
         this.ac = new Accion();
-        this.verVista(cmb);
+        this.verVista();
         vb.desactivar();
+        if(n == 2){
+            vb.setJefeDTerreno1("1");
+            vb.setJefeDTerreno2("2");
+        }
+        else if(n == 3){
+            vb.setJefeDTerreno1("1");
+            vb.setJefeDTerreno2("2");
+            vb.setJefeDTerreno3("3");
+        }
+        else {
+            vb.setJefeDTerreno1("1");
+            vb.setJefeDTerreno2("2");
+            vb.setJefeDTerreno3("3");
+            vb.setJefeDTerreno4("4");
+        }
     }
     
     public vistaBatalla getvistaBatalla(){
         return this.vb;
     }
-    public void verVista (ControladorMenuB cmb){
-        this.cmb = cmb;
+    public void verVista (){
         this.vb = new vistaBatalla();
         this.vb.setVisible(true);
         this.vb.agregarListener(this);

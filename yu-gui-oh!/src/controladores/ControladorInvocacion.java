@@ -21,17 +21,15 @@ public class ControladorInvocacion implements ActionListener{
     
     private vistaBatalla vb;
     private vistaInvocacion vi;
-    private ControladorBatalla cb;
     
     public ControladorInvocacion(){
         this.vi = new vistaInvocacion();
-        this.verVistaInvocacion(cb);
+        this.verVistaInvocacion();
     }
     public vistaInvocacion getvistaInvocacion(){
         return this.vi;
     }
-     public void verVistaInvocacion (ControladorBatalla cb){
-        this.cb = cb;
+     public void verVistaInvocacion (){
         this.vi = new vistaInvocacion();
         this.vi.setVisible(true);
         this.vi.agregarListener(this);

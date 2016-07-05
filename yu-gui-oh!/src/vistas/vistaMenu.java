@@ -8,6 +8,7 @@ package vistas;
 import controladores.ControladorPrincipal;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 
 /**
  *
@@ -39,6 +40,7 @@ public class vistaMenu extends javax.swing.JFrame {
         torneoBT = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        usuario = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,7 +54,9 @@ public class vistaMenu extends javax.swing.JFrame {
 
         jButton1.setText("Salir");
 
-        jLabel2.setText("Usuario");
+        jLabel2.setText("Usuario:");
+
+        usuario.setText("  ");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -72,7 +76,9 @@ public class vistaMenu extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton1)))
@@ -81,17 +87,19 @@ public class vistaMenu extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(17, 17, 17)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel2)
+                        .addComponent(usuario)))
                 .addGap(41, 41, 41)
                 .addComponent(perfilBT)
                 .addGap(32, 32, 32)
                 .addComponent(batallaBT)
                 .addGap(35, 35, 35)
                 .addComponent(torneoBT)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(35, 35, 35))
         );
@@ -123,6 +131,7 @@ public class vistaMenu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton perfilBT;
     private javax.swing.JButton torneoBT;
+    private javax.swing.JLabel usuario;
     // End of variables declaration//GEN-END:variables
     
     public JButton getBoton1(){
@@ -133,6 +142,12 @@ public class vistaMenu extends javax.swing.JFrame {
     }
     public JButton getBoton3(){
         return this.torneoBT;
+    }
+    public JLabel gerUsuario(){
+        return this.usuario;
+    }
+    public void setUsuario(String usuario){
+        this.usuario.setText(usuario);
     }
     public void agregarListener(ActionListener al){
         this.perfilBT.addActionListener(al);

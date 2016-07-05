@@ -17,17 +17,15 @@ import javax.swing.JButton;
 public class ControladorMenuB implements ActionListener{
     
     private vistaMenuBatalla vmb;
-    private ControladorMenu cm;
     
     public vistaMenuBatalla getvistaMenu(){
         return this.vmb;
     }
     public ControladorMenuB(){
         this.vmb = new vistaMenuBatalla();
-        this.verVista(cm);
+        this.verVista();
     }
-    public void verVista (ControladorMenu cm){
-        this.cm = cm;
+    public void verVista (){
         this.vmb = new vistaMenuBatalla();
         this.vmb.setVisible(true);
         this.vmb.agregarListener(this);
@@ -36,8 +34,18 @@ public class ControladorMenuB implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(vmb.getBoton() == (JButton)e.getSource()){
-            this.vmb.setVisible(false);
-            ControladorBatalla cb = new ControladorBatalla();
-          }
+            if(vmb.getACantJug() == 1){
+                this.vmb.setVisible(false);
+                ControladorBatalla cb = new ControladorBatalla(2);
+            }
+            else if(vmb.getACantJug() == 2){
+                this.vmb.setVisible(false);
+                ControladorBatalla cb = new ControladorBatalla(3);
+            } 
+            else if(vmb.getACantJug() == 3){
+                this.vmb.setVisible(false);
+                ControladorBatalla cb = new ControladorBatalla(4);
+            }
+        }
     }        
 }

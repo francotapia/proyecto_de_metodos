@@ -20,19 +20,17 @@ import vistas.vistaRotaciones;
 public class ControladorRotaciones implements ActionListener {
     private vistaRotaciones vr;
     private Tablero terr;
-    private ControladorDespliegue cd;
     private ControladorBatalla cb;
     
     public ControladorRotaciones(){
         this.vr = new vistaRotaciones();
-        this.verVista(cd);
+        this.verVista();
     }
     public vistaRotaciones getVistaRotaciones(){
         return this.vr;
     }
 
-    public void verVista (ControladorDespliegue cd){
-        this.cd = cd;
+    public void verVista (){
         this.vr = new vistaRotaciones();
         this.vr.setVisible(true);
         this.vr.agregarListener(this);

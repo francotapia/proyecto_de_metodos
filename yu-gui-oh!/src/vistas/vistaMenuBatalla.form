@@ -108,7 +108,7 @@
         <Component class="javax.swing.JComboBox" name="cantJugCB">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;2 jugadores&quot;, &quot;3 jugadores&quot;, &quot;4 jugadores&quot; })" type="code"/>
+              <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;2&quot;, &quot;3&quot;, &quot;4&quot; })" type="code"/>
             </Property>
           </Properties>
           <AuxValues>

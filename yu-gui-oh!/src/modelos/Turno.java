@@ -24,8 +24,6 @@ public class Turno {
     public ArrayList<Jugador> setJugadores(ArrayList<Jugador> jugadores){
         this.jugadores=jugadores;
         return jugadores;
-    }
-    
-    
+    }    
 }
 

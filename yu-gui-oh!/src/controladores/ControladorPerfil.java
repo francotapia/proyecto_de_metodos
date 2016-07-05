@@ -17,17 +17,15 @@ import javax.swing.JButton;
 public class ControladorPerfil implements ActionListener{
     
     private vistaPerfil vp;
-    private ControladorMenu cm;
     
     public ControladorPerfil(){
         this.vp = new vistaPerfil();
-        this.verVista(cm);
+        this.verVista();
     }
     public vistaPerfil getvistaPerfil(){
         return this.vp;
     }
-     public void verVista (ControladorMenu cm){
-        this.cm = cm;
+     public void verVista (){
         this.vp = new vistaPerfil();
         this.vp.setVisible(true);
         this.vp.agregarListener(this);
@@ -37,7 +35,7 @@ public class ControladorPerfil implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if(vp.getBoton2() == (JButton)e.getSource()){
           this.vp.setVisible(false);
-          ControladorMenu cm = new ControladorMenu();
+          ControladorMenu cm = new ControladorMenu(null);
           }
     }    
 }

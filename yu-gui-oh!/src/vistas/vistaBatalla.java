@@ -569,6 +569,19 @@ public class vistaBatalla extends javax.swing.JFrame {
         //this.imagenD1.setIcon(new ImageIcon("Imagenes\\carasDados\\3.png"));
         this.imagenD1.setIcon(imagen);
     }
+    public void setJefeDTerreno1(String nom){
+        this.matriz[7][0].setText(nom);
+    }
+    public void setJefeDTerreno2(String nom){
+        this.matriz[7][14].setText(nom);
+    }
+    public void setJefeDTerreno3(String nom){
+        this.matriz[14][7].setText(nom);
+    }
+    public void setJefeDTerreno4(String nom){
+        this.matriz[0][7].setText(nom);
+    }
+    
     //set para mostrar el resultado como texto.
     public void setResultadoD1(String nombre){
         this.resultD1.setText(nombre);

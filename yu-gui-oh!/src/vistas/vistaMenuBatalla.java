@@ -8,6 +8,7 @@ package vistas;
 import controladores.ControladorPrincipal;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 
 /**
  *
@@ -46,7 +47,7 @@ public class vistaMenuBatalla extends javax.swing.JFrame {
 
         jLabel2.setText("Cantidad de jugadores:");
 
-        cantJugCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2 jugadores", "3 jugadores", "4 jugadores" }));
+        cantJugCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2", "3", "4" }));
 
         jugarBT.setText("Jugar");
 
@@ -125,6 +126,9 @@ public class vistaMenuBatalla extends javax.swing.JFrame {
 
 public JButton getBoton(){
     return this.jugarBT;
+}
+public int getACantJug(){
+    return this.cantJugCB.getSelectedIndex()+1;
 }
 public void agregarListener(ActionListener al){
         this.jugarBT.addActionListener(al);

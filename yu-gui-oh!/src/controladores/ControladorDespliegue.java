@@ -21,19 +21,16 @@ public class ControladorDespliegue implements ActionListener {
     
     private vistaDespliegue vd;
     private Tablero terr;
-    private ControladorInvocacion ci;
-    private ControladorBatalla cb;
     
     public ControladorDespliegue(){
         this.vd = new vistaDespliegue();
-        this.verVista(ci);
+        this.verVista();
     }
     public vistaDespliegue getVistaDespliegue(){
         return this.vd;
     }
     
-    public void verVista (ControladorInvocacion ci){
-        this.ci = ci;
+    public void verVista (){
         this.vd = new vistaDespliegue();
         this.vd.setVisible(true);
         this.vd.agregarListener(this);

@@ -18,10 +18,13 @@ public class ControladorRegistro implements ActionListener {
     
     private Registro mR;
     private vistaRegistro vr;
-    private ControladorLogin cl;
     
-    public void verVista (ControladorLogin cl){
-        this.cl = cl;
+    public ControladorRegistro(){
+        this.vr = new vistaRegistro();
+        this.verVista();
+    }
+    
+    public void verVista (){
         this.mR = new Registro();
         this.vr = new vistaRegistro();
         this.vr.setVisible(true);
@@ -38,7 +41,7 @@ public class ControladorRegistro implements ActionListener {
             if (mR.registroCorrecto()) {
                 System.out.println("Usuario registrado correctamente");
                 this.vr.dispose();
-                this.cl.vl.setVisible(true);
+                ControladorLogin cl = new ControladorLogin();
             }
             else {
                 System.out.println("Fallo el registro");
@@ -46,7 +49,7 @@ public class ControladorRegistro implements ActionListener {
         }
         else if (e.getSource() == vr.getBotonAtras()) {
             this.vr.dispose();
-            this.cl.vl.setVisible(true);
+            ControladorLogin cl = new ControladorLogin();
         }
     }
     

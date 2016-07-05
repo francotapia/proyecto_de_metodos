@@ -7,6 +7,7 @@ package controladores;
 
 import java.awt.event.ActionEvent;
 import vistas.vistaMenu;
+import modelos.Jugador;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
@@ -17,18 +18,18 @@ import javax.swing.JButton;
 public class ControladorMenu implements ActionListener{
     
     private vistaMenu vm;
-    private ControladorLogin cl;
+    private Jugador jug;
+    ControladorLogin cl;
     
     public vistaMenu getvistaMenu(){
         return this.vm;
     }
-    public ControladorMenu(){
+    public ControladorMenu(String usuario){
         this.vm = new vistaMenu();
-        this.verVista(cl);
+        this.vm.setUsuario(usuario);
+        this.verVista();
     }
-     public void verVista (ControladorLogin cl){
-        this.cl = cl;
-        this.vm = new vistaMenu();
+     public void verVista (){
         this.vm.setVisible(true);
         this.vm.agregarListener(this);
      }
