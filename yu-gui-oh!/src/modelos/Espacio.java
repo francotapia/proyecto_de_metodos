@@ -16,6 +16,7 @@ public class Espacio {
     private boolean disponible;
     private Criatura criatura;
     public Trampa trampa;
+    private JefeDeTerreno jefeDeTerreno;
     
     //Constructor
     public Espacio(int x, int y){
@@ -27,13 +28,13 @@ public class Espacio {
     }
 
     //Metodos
-    
-    public boolean hayTerreno() { //comprueba si el terreno tiene despliegue
-        return dueno != null;
-    }
+    //********************************
     //gets
     public String getDuneo(){
         return this.dueno;
+    }
+    public JefeDeTerreno getJefeDeTerreno(){
+        return this.jefeDeTerreno;
     }
     public int getPosicionX(){
         return this.posicionX;
@@ -51,5 +52,45 @@ public class Espacio {
     //sets
     public void setDueno(String dueno){ //da dueño
         this.dueno = dueno;
+    }
+    public void setJefeDeTerreno(JefeDeTerreno jefeDeTerreno){
+        this.jefeDeTerreno = jefeDeTerreno;
+    }
+    public void setCriatura(Criatura criatura){
+        this.criatura = criatura;
+    }
+    
+    ////otros metodos para tablero-batalla
+    public boolean verificarJefeDeTerreno(){ //verifica si está jefe de terreno...
+        if(this.jefeDeTerreno != null){         //puede usarse para ubicar terreno y comprobaciones
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public boolean verificarCriatura(){  //verifica si hay ciratura en espacio...
+        if(this.criatura != null){      //puede utilizarse para movimiento de ciratura (no pasar encima de otra
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public boolean hayTerreno() { //comprueba si el terreno tiene despliegue
+        if(this.dueno != null){     //para despliegue
+            return dueno != null;
+        }
+        else{
+            return false;
+        }
+    }
+    public boolean verificarVacio(){ //comprueba si hay criatura o Jefe
+        if(!this.verificarJefeDeTerreno() && !this.verificarCriatura()){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }
