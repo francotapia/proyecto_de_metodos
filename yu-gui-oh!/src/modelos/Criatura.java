@@ -54,5 +54,8 @@ public class Criatura {
     public void atacar(){
         
     }
+    public void comprobarAtaque(int x, int y, int x1, int y1){ //boolean
+       
+    }
 
 }

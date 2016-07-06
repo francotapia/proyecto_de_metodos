@@ -36,7 +36,10 @@ public class ControladorBatalla implements ActionListener{
         if(n == 2){
             vb.setJefeDTerreno1("1");
             vb.setJefeDTerreno2("2");
-            //aqui deberia llamarse a setArray2
+            Jugador jugador1 = new Jugador();
+            Jugador jugador2 = new Jugador();
+            Turno turno = new Turno();
+            turno.setArray2(jugador1, jugador2);//agrega jugadores a arreglo del turno
             Espacio espacioJT1 = new Espacio(7,0); //crea nuevo espacio con coordenadas del JT1
             espacioJT1.setDueno(jugador1.getUsuario()); //da dueño al jefe de terreno
             Espacio espacioJT2 = new Espacio(7,14);
@@ -46,7 +49,11 @@ public class ControladorBatalla implements ActionListener{
             vb.setJefeDTerreno1("1");
             vb.setJefeDTerreno2("2");
             vb.setJefeDTerreno3("3");
-            //aqui deberia llamarse a setArray3
+            Jugador jugador1 = new Jugador();
+            Jugador jugador2 = new Jugador();
+            Jugador jugador3 = new Jugador();
+            Turno turno = new Turno();
+            turno.setArray3(jugador1, jugador2, jugador3);//agrega jugadores a arreglo del turno
             Espacio espacioJT1 = new Espacio(7,0); //crea nuevo espacio con coordenadas del JT1
             espacioJT1.setDueno(jugador1.getUsuario()); //da dueño al jefe de terreno
             Espacio espacioJT2 = new Espacio(7,14);
@@ -59,7 +66,12 @@ public class ControladorBatalla implements ActionListener{
             vb.setJefeDTerreno2("2");
             vb.setJefeDTerreno3("3");
             vb.setJefeDTerreno4("4");
-            //aqui deberia llamarse a setArray4
+            Jugador jugador1 = new Jugador();
+            Jugador jugador2 = new Jugador();
+            Jugador jugador3 = new Jugador();
+            Jugador jugador4 = new Jugador();
+            Turno turno = new Turno();
+            turno.setArray4(jugador1, jugador2, jugador3, jugador4);//agrega jugadores a arreglo del turno
             Espacio espacioJT1 = new Espacio(7,0); //crea nuevo espacio con coordenadas del JT1
             espacioJT1.setDueno(jugador1.getUsuario()); //da dueño al jefe de terreno
             Espacio espacioJT2 = new Espacio(7,14);
@@ -96,7 +108,9 @@ public class ControladorBatalla implements ActionListener{
           //Dado1:
           if(vb.getBoton1() == (JButton)e.getSource()){
               Dado Dado1 = new Dado(); //instanciación de objeto dado con constructor vacío
+              Dado1 = Dado1.sacarDeBD(Dado1.sacarDadoRandom());//sacar dado random de base de datos
               int num1 = Dado1.lanzarDado(); //se llama a metodo del dado que da int al azar (de 1 a 6)
+              System.out.println(Dado1.getCara6());
               String nom1 = Dado1.cara(num1); //se llama a metodo que da nombre a la cara
               vb.setResultadoD1(nom1); //se inserta en textfield el resultado
               int cambio = ac.guardar(num1); //se guarda acción en contadro de acciones
@@ -135,7 +149,9 @@ public class ControladorBatalla implements ActionListener{
           //Dado2:
           if(vb.getBoton2() == (JButton)e.getSource()){
               Dado Dado2 = new Dado();
+              Dado2 = Dado2.sacarDeBD(Dado2.sacarDadoRandom());
               int num2 = Dado2.lanzarDado();
+              System.out.println(Dado2.getCara6());
               String nom2 = Dado2.cara(num2);
               ImageIcon objImag2 = Dado2.ImagenesResultados(num2);
               vb.setImagen(objImag2);
@@ -176,6 +192,8 @@ public class ControladorBatalla implements ActionListener{
           //Dado3:
           if(vb.getBoton3() == (JButton)e.getSource()){
               Dado Dado3 = new Dado();
+              Dado3 = Dado3.sacarDeBD(Dado3.sacarDadoRandom());
+              System.out.println(Dado3.getCara6());
               int num3 = Dado3.lanzarDado();
               String nom3 = Dado3.cara(num3);
               ImageIcon objImag3 = Dado3.ImagenesResultados(num3);
@@ -218,6 +236,8 @@ public class ControladorBatalla implements ActionListener{
           //Dado4:
           if(vb.getBoton4() == (JButton)e.getSource()){
               Dado Dado4 = new Dado();
+              Dado4 = Dado4.sacarDeBD(Dado4.sacarDadoRandom());
+              System.out.println(Dado4.getCara6());
               int num4 = Dado4.lanzarDado();
               String nom4 = Dado4.cara(num4);
               ImageIcon objImag4 = Dado4.ImagenesResultados(num4);

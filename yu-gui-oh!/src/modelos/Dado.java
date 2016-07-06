@@ -11,6 +11,7 @@ import java.sql.Statement;
 import java.util.Random;
 import javax.swing.ImageIcon;
 import otros.BD;
+import java.sql.Statement;
 /**
  *
  * @author franc
@@ -23,19 +24,23 @@ public class Dado {
     private String nombreCriatura;
     private int numeroDeCara;
     private ImageIcon imagenDado;
-    private Criatura criatura;
+    private int criatura;
+    private int numeroEnPuzzle;
     private static final int[][] forma1 = {{0,0},{0,1},{0,2},{1,1},{2,1},{3,1}};
 
 
     //contructores para objeto dado:
-    public Dado (String cara6, String cara, int camino, String nombreCriatura, Criatura criatura){
+    public Dado (String cara6, int criatura, int numeroEnPuzzle){
         this.cara6 = cara6;
-        this.cara = cara;
-        this.camino = camino;
-        this.nombreCriatura = nombreCriatura;
+        this.numeroEnPuzzle = numeroEnPuzzle;
+        this.cara = null;
         this.criatura = criatura;
     } 
     public Dado(){} //constructor vacio
+    
+    public String getCara6(){
+        return cara6;
+    }
     
     public int lanzarDado(){
         Random rGenerador = new Random();
@@ -81,4 +86,36 @@ public class Dado {
       //imagenDado = new ImageIcon("\\Imagenes\\carasDados\\"+Integer.toString(DadoR)+".png");
     }
     
+    //DB:
+    public Dado sacarDeBD(int dadoEnPuzzle){
+        BD conexionBD = new BD();
+        try{
+            conexionBD.conectar();
+            Statement stmt = conexionBD.crearConsulta();
+            final String consulta = "SELECT CRIATURA, ID_DADO, CARA6 FROM DADOS WHERE ID_DADO = " + dadoEnPuzzle;
+                    
+            ResultSet resultados = stmt.executeQuery(consulta);
+            
+            if(resultados.next()){
+                int IDCriatura = resultados.getInt("CRIATURA");
+                String cara6 = resultados.getString("CARA6");
+                int IDDado = resultados.getInt("ID_DADO");
+                return new Dado(cara6, IDCriatura, IDDado);
+            }
+            else{
+                return null;
+            }
+        }
+        catch(SQLException ex){
+            System.err.println("Base de datos no conectada");
+            return null;
+        }
+    }
+    
+    public int sacarDadoRandom(){
+        Random rGenerador = new Random();
+        numeroEnPuzzle = rGenerador.nextInt(20)+1;
+        System.out.println(numeroEnPuzzle);
+        return numeroEnPuzzle;
+    }
 }
