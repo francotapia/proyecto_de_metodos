@@ -94,15 +94,13 @@ public class ControladorBatalla implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) { //accede y printea la coordenada
-        for(int y = 0; y<15; y++){
+     for(int y = 0; y<15; y++){
             for(int x=0; x<15; x++){
                 if(vb.getMatriz()[x][y]==e.getSource()){
                     System.out.println("x="+x+",y="+y);
-                    vb.colorear(x, y, Dado.getForma1());
                 }
             }
-        }
-        
+        }   
        
         //Cambio de imagen del dado con su resultado.
           //Dado1:
@@ -301,6 +299,5 @@ public class ControladorBatalla implements ActionListener{
             ControladorInvocacion ci = new ControladorInvocacion();
           }
           
-    }
-     
+    }    
 }

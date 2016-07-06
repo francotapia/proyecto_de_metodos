@@ -22,6 +22,7 @@ public class ControladorRotaciones implements ActionListener {
     private vistaRotaciones vr;
     private Tablero terr;
     private ControladorBatalla cb;
+    private vistaBatalla vb;
     
     public ControladorRotaciones(){
         this.vr = new vistaRotaciones();
@@ -38,8 +39,13 @@ public class ControladorRotaciones implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        for(int y = 0; y<15; y++){
+            for(int x=0; x<15; x++){
+                if(vb.getMatriz()[x][y]==e.getSource()){
+                    System.out.println("x="+x+",y="+y);
+                    vb.colorear(x, y, Dado.getForma1());
+                }
+            }
+        }   
     }
-    
-    
 }
