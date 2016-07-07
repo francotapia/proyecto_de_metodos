@@ -101,6 +101,7 @@ public class ControladorBatalla implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) { //accede y printea la coordenada
+        if(vb.getBotonTurn() == (JButton)e.getSource()){
      
         for(int y = 0; y<15; y++){
             for(int x=0; x<15; x++){
@@ -110,7 +111,7 @@ public class ControladorBatalla implements ActionListener{
                 }
             }
         }   
-        
+        }
         
         //Cambio de imagen del dado con su resultado.
           //Dado1:
