@@ -57,7 +57,9 @@ public class Accion {
     }
     public int guardar (int num){
         if(num == 1){
-            return this.ataque = ataque +1;  
+            this.ataque = ataque +1;
+            return ataque;
+            
         }
         if(num == 2){
             return this.invocacion = invocacion +1;

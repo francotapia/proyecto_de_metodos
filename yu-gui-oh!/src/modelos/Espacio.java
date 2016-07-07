@@ -30,7 +30,7 @@ public class Espacio {
     //Metodos
     //********************************
     //gets
-    public String getDuneo(){
+    public String getDueno(){
         return this.dueno;
     }
     public JefeDeTerreno getJefeDeTerreno(){

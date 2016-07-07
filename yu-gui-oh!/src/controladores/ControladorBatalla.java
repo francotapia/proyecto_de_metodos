@@ -23,28 +23,34 @@ public class ControladorBatalla implements ActionListener{
     private Espacio espacio;
     Accion ac;
     Turno turno;
+    Jugador jugadorActual;
     Jugador jugador1;
     Jugador jugador2;
     Jugador jugador3;
     Jugador jugador4;
     
-    public ControladorBatalla(int n) {
+    public ControladorBatalla(int n, Jugador jugador1Log1, String usuario2, String contraseña2) {
         this.vb = new vistaBatalla();
+        this.jugador1 = jugador1Log1;
+        this.jugador2 = new Jugador(usuario2, contraseña2, 1);
+        System.out.println(jugador1.getUsuario());
+        System.out.println(jugador2.getUsuario());
         this.ac = new Accion(0, 0, 0 , 0, 0);
         this.verVista();
         vb.desactivar();
-        ControladorLoginBatalla c = new ControladorLoginBatalla();
+        
         if(n == 2){
             Turno turno = new Turno();
             vb.setJefeDTerreno1("1");
             vb.setJefeDTerreno2("2");
-            Jugador jugador1 = new Jugador();
-            Jugador jugador2 = new Jugador();
             turno.setArray2(jugador1, jugador2);//agrega jugadores a arreglo del turno
             Espacio espacioJT1 = new Espacio(7,0); //crea nuevo espacio con coordenadas del JT1
             espacioJT1.setDueno(jugador1.getUsuario()); //da dueño al jefe de terreno
             Espacio espacioJT2 = new Espacio(7,14);
             espacioJT2.setDueno(jugador2.getUsuario());
+            System.out.println("El dueño del jefe1 es " + espacioJT1.getDueno() + " y El dueño del jefe2 es " + espacioJT2.getDueno());
+            Jugador jugadorActual = jugador1;
+            vb.setTurnoJugadorLabel(jugadorActual.getUsuario());
         }
         else if(n == 3){
             vb.setJefeDTerreno1("1");
@@ -95,7 +101,8 @@ public class ControladorBatalla implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) { //accede y printea la coordenada
-     for(int y = 0; y<15; y++){
+     
+        for(int y = 0; y<15; y++){
             for(int x=0; x<15; x++){
                 if(vb.getMatriz()[x][y]==e.getSource()){
                     System.out.println("x="+x+",y="+y);
@@ -103,7 +110,8 @@ public class ControladorBatalla implements ActionListener{
                 }
             }
         }   
-       
+        
+        
         //Cambio de imagen del dado con su resultado.
           //Dado1:
           if(vb.getBoton1() == (JButton)e.getSource()){
@@ -302,9 +310,13 @@ public class ControladorBatalla implements ActionListener{
           }
         if(vb.getBotonTurn() == (JButton)e.getSource()){
            if (vb.getBotonTurn() == e.getSource()){
-               
+               System.out.println(ac.getMovimiento() + ac.getAtaque() + 0 + ac.getMagia() + ac.getTrampa());
+               //jugadorActual.setAcciones(ac.getMovimiento(), ac.getAtaque(), 0, ac.getMagia(), ac.getTrampa());
+               turno.empezarTurno(2, turno.getJugadores());
+               System.out.println(jugadorActual.getUsuario()); 
+               vb.setTurnoJugadorLabel(jugadorActual.getUsuario());
+               //hay problemas con el jugadorActual
            }
-        }
-          
+        } 
     }    
 }

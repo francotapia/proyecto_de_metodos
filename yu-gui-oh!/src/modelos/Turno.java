@@ -23,6 +23,9 @@ public class Turno {
     Jugador jugador4;
     Jugador jugadorActual;
     
+    public ArrayList<Jugador> getJugadores(){
+        return this.jugadores;
+    }
     public static int sumaTurno(){
         numeroTurno = numeroTurno + 1;
         if(numeroTurno<5){
@@ -42,8 +45,6 @@ public class Turno {
         ArrayList<Jugador> jugadores = new ArrayList<Jugador>(2);
         jugadores.add(jugador1);
         jugadores.add(jugador2);
-        System.out.println("jugador1="+jugador1.getUsuario());
-        System.out.println("jugador2="+jugador2.getUsuario());
     }
     public void setArray3(Jugador jugadro1, Jugador jugador2, Jugador jugador3){
         ArrayList<Jugador> jugadores = new ArrayList<Jugador>(3);
@@ -69,9 +70,19 @@ public class Turno {
         
     }
     public void empezarTurno(int numeroJugadores, ArrayList<Jugador> jugadores){
-         Random rGenerador = new Random();
+        Random rGenerador = new Random();      //toma a jugador random segun posicion en array
         numeroTurno = rGenerador.nextInt(numeroJugadores);
         jugadorActual = jugadores.get(numeroTurno);
+    }
+    public void setTurno(){               //utiliza la variable numeroTurnopara ir en orden
+        if(this.numeroTurno<1){           //turnos en orden de array
+            this.numeroTurno++;
+            jugadorActual = jugadores.get(numeroTurno);
+        }
+        else{
+            this.numeroTurno = 0;
+            System.out.println("Nueva ronda");
+        }
     }
 }
 

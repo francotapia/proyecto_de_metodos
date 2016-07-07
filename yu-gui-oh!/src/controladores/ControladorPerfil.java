@@ -35,7 +35,7 @@ public class ControladorPerfil implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if(vp.getBoton2() == (JButton)e.getSource()){
           this.vp.setVisible(false);
-          ControladorMenu cm = new ControladorMenu(null);
+          ControladorMenu cm = new ControladorMenu(null, null);
           }
     }    
 }

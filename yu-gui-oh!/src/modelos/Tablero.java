@@ -24,7 +24,7 @@ public class Tablero {
     }
     
     public String getDueno(int x, int y){ //arroja dueño de espacio en tablero en (x,y)
-        return tablero[x][y].getDuneo(); 
+        return tablero[x][y].getDueno(); 
     }
     //////sets
     public void setDueno(int x, int y, int[][] matriz, String dueno){ //agrega dueño a terreno desplegado (forma/matriz)

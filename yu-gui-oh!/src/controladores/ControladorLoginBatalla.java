@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import modelos.Turno;
 import modelos.Jugador;
+import otros.ActividadUsuario;
 import vistas.vistaLoginBatalla;
 
 /**
@@ -19,16 +20,20 @@ import vistas.vistaLoginBatalla;
 public class ControladorLoginBatalla implements ActionListener{
     
     vistaLoginBatalla vlb;
-    Jugador jug;
+    Jugador jugador1;
+    Jugador jugador2;
     Turno turn;
+    private int cantidadJ;
      //Se escucha a la vistaLogin
     public vistaLoginBatalla getvistaLogin(){
         return this.vlb;
     }
-    public ControladorLoginBatalla(){ //constructor login para inicializar vistas
-        this.jug = new Jugador("antonio", "andres", 1);
+    public ControladorLoginBatalla(int c, Jugador jugador1){ //constructor login para inicializar vistas
+        this.jugador2 = new Jugador();
+        this.jugador1 = jugador1;
         this.turn = new Turno();
         this.vlb = new vistaLoginBatalla();
+        this.cantidadJ = c;
         this.verVista();
     }    
 
@@ -37,12 +42,14 @@ public class ControladorLoginBatalla implements ActionListener{
         this.vlb.agregarListener(this);  
     }
     
-    private void verificar(String usuario,String contraseña ){
-        if(jug.existeUsuario(usuario)){
+    private void verificar(String usuario,String contraseña){
+        if(jugador2.existeUsuario(usuario)){
             
-            if(jug.ingresar(usuario, contraseña) != null){
+            if(jugador2.ingresar(usuario, contraseña) != null){
                 vlb.bienvenida(usuario);
                 this.vlb.setVisible(false);
+                ControladorBatalla cb = new ControladorBatalla(cantidadJ, jugador1, usuario, contraseña);
+                ActividadUsuario.actividadUsuario("El usuario " + jugador2.getUsuario() + " inicio sesion");
             }
             else{
                 vlb.errorContraseña(usuario);
@@ -52,7 +59,6 @@ public class ControladorLoginBatalla implements ActionListener{
             vlb.errorUsuario(usuario);
             this.vlb.setVisible(true);
         }
-        
     }
    
     @Override
@@ -60,8 +66,7 @@ public class ControladorLoginBatalla implements ActionListener{
         if(vlb.getBoton1() == (JButton)e.getSource()){
              String usuario = vlb.getUsuario();
              String contraseña = vlb.getContraseña();
-             verificar(usuario,contraseña); 
-             
+             verificar(usuario,contraseña);   
         } 
     }
 }

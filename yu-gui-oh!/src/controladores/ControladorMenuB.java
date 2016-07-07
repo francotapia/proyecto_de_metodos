@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import vistas.vistaMenuBatalla;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import modelos.Jugador;
 
 /**
  *
@@ -18,11 +19,13 @@ public class ControladorMenuB implements ActionListener{
     
     private vistaMenuBatalla vmb;
     private String usuario;
+    private Jugador jugador;
     
     public vistaMenuBatalla getvistaMenu(){
         return this.vmb;
     }
-    public ControladorMenuB(){
+    public ControladorMenuB(Jugador jugador){
+        this.jugador = jugador;
         this.vmb = new vistaMenuBatalla();
         this.verVista();
     }
@@ -37,15 +40,15 @@ public class ControladorMenuB implements ActionListener{
         if(vmb.getBoton() == (JButton)e.getSource()){
             if(vmb.getACantJug() == 1){
                 this.vmb.setVisible(false);
-                ControladorBatalla cb = new ControladorBatalla(2);
+                ControladorLoginBatalla cb = new ControladorLoginBatalla(2, jugador);
             }
             else if(vmb.getACantJug() == 2){
                 this.vmb.setVisible(false);
-                ControladorBatalla cb = new ControladorBatalla(3);
+                ControladorLoginBatalla cb = new ControladorLoginBatalla(3, jugador);
             } 
             else if(vmb.getACantJug() == 3){
                 this.vmb.setVisible(false);
-                ControladorBatalla cb = new ControladorBatalla(4);
+                ControladorLoginBatalla cb = new ControladorLoginBatalla(4, jugador);
             }
         }
     }        

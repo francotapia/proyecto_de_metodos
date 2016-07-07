@@ -24,8 +24,9 @@ public class ControladorMenu implements ActionListener{
     public vistaMenu getvistaMenu(){
         return this.vm;
     }
-    public ControladorMenu(String usuario){
+    public ControladorMenu(String usuario, String contraseña){ //recibe contraseña y nombre de usuario
         this.vm = new vistaMenu();
+        this.jug = new Jugador(usuario, contraseña, 1); //crea jugador con jefe por defecto
         this.vm.setUsuario(usuario);
         this.verVista();
     }
@@ -38,7 +39,7 @@ public class ControladorMenu implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if(vm.getBoton2() == (JButton)e.getSource()){
            this.vm.setVisible(false);
-           ControladorMenuB cmb = new ControladorMenuB(); 
+           ControladorMenuB cmb = new ControladorMenuB(jug); //le pasa a controlador MB el jugador como parametro
         }
         if(vm.getBoton1() == (JButton)e.getSource()){
            this.vm.setVisible(false);

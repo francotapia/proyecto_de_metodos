@@ -26,6 +26,9 @@ public class ControladorLogin implements ActionListener{
     public Jugador getJugadorCL(){
         return this.jug;
     }
+    public void setJugador(Jugador jugador){
+        this.jug = jugador;
+    }
      //Se escucha a la vistaLogin
     public vistaLogin getvistaLogin(){
         return this.vl;
@@ -48,7 +51,7 @@ public class ControladorLogin implements ActionListener{
             if(jug.ingresar(usuario, contraseña) != null){
                 vl.bienvenida(usuario);
                 this.vl.setVisible(false);
-                ControladorMenu cm = new ControladorMenu(usuario);
+                ControladorMenu cm = new ControladorMenu(usuario, contraseña); //se le pasa a CM los parametros para crear un jugador
                 ActividadUsuario.actividadUsuario("El usuario " + usuario + " inicio sesion");
             }
             else{
@@ -67,9 +70,7 @@ public class ControladorLogin implements ActionListener{
         if(vl.getBoton1() == (JButton)e.getSource()){
              String usuario = vl.getUsuario();
              String contraseña = vl.getContraseña();
-             verificar(usuario,contraseña); 
-             
-             
+             verificar(usuario,contraseña);  
         } 
         if(vl.getBoton2() == (JButton)e.getSource()){
             this.vl.setVisible(false);
