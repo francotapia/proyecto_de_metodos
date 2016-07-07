@@ -114,7 +114,7 @@ public class Dado {
     
     public int sacarDadoRandom(){
         Random rGenerador = new Random();
-        numeroEnPuzzle = rGenerador.nextInt(20)+1;
+        numeroEnPuzzle = rGenerador.nextInt(15)+1;
         System.out.println(numeroEnPuzzle);
         return numeroEnPuzzle;
     }

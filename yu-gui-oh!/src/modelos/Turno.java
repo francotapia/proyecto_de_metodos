@@ -6,6 +6,7 @@
 package modelos;
 
 import java.util.ArrayList;
+import java.util.Random;
 /**
  *
  * @author Morris
@@ -15,10 +16,12 @@ public class Turno {
     String dueno;
     Accion Accion;
     private ArrayList<Jugador> jugadores;
+    Jugador jugador;
     Jugador jugador1;
     Jugador jugador2;
     Jugador jugador3;
     Jugador jugador4;
+    Jugador jugadorActual;
     
     public static int sumaTurno(){
         numeroTurno = numeroTurno + 1;
@@ -33,7 +36,7 @@ public class Turno {
     public ArrayList<Jugador> setJugadores(ArrayList<Jugador> jugadores){
         this.jugadores=jugadores;
         return jugadores;
-    }    
+    }
     
     public void setArray2(Jugador jugadro1, Jugador jugador2){
         ArrayList<Jugador> jugadores = new ArrayList<Jugador>(2);
@@ -61,6 +64,14 @@ public class Turno {
         System.out.println("jugador2="+jugador2.getUsuario());
         System.out.println("jugador3="+jugador3.getUsuario());
         System.out.println("jugador4="+jugador4.getUsuario());
+    }
+    public void finalizarTurno(){
+        
+    }
+    public void empezarTurno(int numeroJugadores, ArrayList<Jugador> jugadores){
+         Random rGenerador = new Random();
+        numeroTurno = rGenerador.nextInt(numeroJugadores);
+        jugadorActual = jugadores.get(numeroTurno);
     }
 }
 

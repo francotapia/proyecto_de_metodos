@@ -40,33 +40,43 @@ public class ControladorDespliegue implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(vd.getjButton1() == (JButton)e.getSource()){
               ControladorRotaciones cr = new ControladorRotaciones();
+              this.vd.dispose();
           }
           if(vd.getjButton2() == (JButton)e.getSource()){
               ControladorRotaciones cr = new ControladorRotaciones();
+              this.vd.dispose();
           }
           if(vd.getjButton3() == (JButton)e.getSource()){
               ControladorRotaciones cr = new ControladorRotaciones();
+              this.vd.dispose();
           }
           if(vd.getjButton4() == (JButton)e.getSource()){
               ControladorRotaciones cr = new ControladorRotaciones();
+              this.vd.dispose();
           }
           if(vd.getjButton5() == (JButton)e.getSource()){
               ControladorRotaciones cr = new ControladorRotaciones();
+              this.vd.dispose();
           }
           if(vd.getjButton6() == (JButton)e.getSource()){
               ControladorRotaciones cr = new ControladorRotaciones();
+              this.vd.dispose();
           }
           if(vd.getjButton7() == (JButton)e.getSource()){
               ControladorRotaciones cr = new ControladorRotaciones();
+              this.vd.dispose();
           }
           if(vd.getjButton8() == (JButton)e.getSource()){
               ControladorRotaciones cr = new ControladorRotaciones();
+              this.vd.dispose();
           }
           if(vd.getjButton9() == (JButton)e.getSource()){
               ControladorRotaciones cr = new ControladorRotaciones();
+              this.vd.dispose();
           }
           if(vd.getjButton10() == (JButton)e.getSource()){
               ControladorRotaciones cr = new ControladorRotaciones();
+              this.vd.dispose();
           }
     }    
 }

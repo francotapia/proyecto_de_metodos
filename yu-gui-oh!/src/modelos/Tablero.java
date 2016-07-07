@@ -2,8 +2,6 @@ package modelos;
 
 import java.awt.Color;
 
-
-
 /**
  *
  * @author franco

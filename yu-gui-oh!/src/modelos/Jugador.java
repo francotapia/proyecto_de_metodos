@@ -18,6 +18,9 @@ public class Jugador {
     private int puntaje;
     private int jefeTerreno;
     private PuzzleDeDados puzzle;
+    private Accion accion;
+    private Turno turno;
+    private boolean leTocaJugar;
     
     //Constructores de la clase
     public Jugador(String jug, String cont, int jTerreno){
@@ -26,6 +29,7 @@ public class Jugador {
         this.jefeTerreno = jTerreno;
     }
     public Jugador(){
+        this.turno = new Turno();
         this.usuario = null;
         this.contraseña = null;
         
@@ -41,6 +45,9 @@ public class Jugador {
     public int getPuntaje(){
         return this.puntaje;
     }
+    public boolean getLeTocaJugar(){
+        return this.leTocaJugar;
+    }
     //set de los atributos
     public String setUsuario(String usuario){
         return this.usuario = usuario;
@@ -48,10 +55,16 @@ public class Jugador {
     public String setContraseña(String contraseña){
         return this.contraseña = contraseña;
     }
-    public int setPuntaje(int puntaje){
-        return this.puntaje = puntaje;
+    public void setLeTocaJugar(boolean bool){
+        this.leTocaJugar = bool;
     }
-   
+    public void setPuntaje(int puntaje){
+        this.puntaje = puntaje;
+    }
+   public void setAcciones(int mov, int atac, int inv, int mag, int tramp){
+       Accion accion = new Accion(mov, atac, 0, mag, tramp);
+       this.accion = accion;
+   }
     
     public Jugador ingresar (String usuario, String contraseña){
         //Condición para reconocer si el usuario y contraseña son correctos
@@ -67,7 +80,8 @@ public class Jugador {
                 String nombre = resultados.getString("USUARIO");
                 String password = resultados.getString("PASSWORD");
                 int jefeTerr = resultados.getInt("JEFE_TERRENO");
-                return new Jugador(nombre, password, jefeTerr);
+                Jugador jugador =  new Jugador(nombre, password, jefeTerr);
+                return jugador;
             }
             else {
                 return null;
@@ -101,6 +115,4 @@ public class Jugador {
                 return false;
         }
     }
-    
-
 }

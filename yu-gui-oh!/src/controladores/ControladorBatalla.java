@@ -30,15 +30,16 @@ public class ControladorBatalla implements ActionListener{
     
     public ControladorBatalla(int n) {
         this.vb = new vistaBatalla();
-        this.ac = new Accion();
+        this.ac = new Accion(0, 0, 0 , 0, 0);
         this.verVista();
         vb.desactivar();
+        ControladorLoginBatalla c = new ControladorLoginBatalla();
         if(n == 2){
+            Turno turno = new Turno();
             vb.setJefeDTerreno1("1");
             vb.setJefeDTerreno2("2");
             Jugador jugador1 = new Jugador();
             Jugador jugador2 = new Jugador();
-            Turno turno = new Turno();
             turno.setArray2(jugador1, jugador2);//agrega jugadores a arreglo del turno
             Espacio espacioJT1 = new Espacio(7,0); //crea nuevo espacio con coordenadas del JT1
             espacioJT1.setDueno(jugador1.getUsuario()); //da dueño al jefe de terreno
@@ -98,6 +99,7 @@ public class ControladorBatalla implements ActionListener{
             for(int x=0; x<15; x++){
                 if(vb.getMatriz()[x][y]==e.getSource()){
                     System.out.println("x="+x+",y="+y);
+                    vb.colorear(x, y, Dado.getForma1());
                 }
             }
         }   
@@ -298,6 +300,11 @@ public class ControladorBatalla implements ActionListener{
         if(vb.getBotonInv() == (JButton)e.getSource()){ //mostrar vista invocacion
             ControladorInvocacion ci = new ControladorInvocacion();
           }
+        if(vb.getBotonTurn() == (JButton)e.getSource()){
+           if (vb.getBotonTurn() == e.getSource()){
+               
+           }
+        }
           
     }    
 }

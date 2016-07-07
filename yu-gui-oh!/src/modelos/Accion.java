@@ -17,12 +17,12 @@ public class Accion {
     private int invocacion;
     private int ataque;
 
-    public Accion(){
-        this.movimiento = 0;
-        this.magia = 0;
-        this.trampa = 0;
-        this.invocacion = 0;
-        this.ataque = 0;
+    public Accion(int mov, int atac, int inv, int mag, int tramp){
+        this.movimiento = mov;
+        this.magia = mag;
+        this.trampa = tramp;
+        this.invocacion = inv;
+        this.ataque = atac;
     }
     public int getMovimiento(){
         return this.movimiento;

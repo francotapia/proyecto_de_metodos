@@ -55,7 +55,7 @@ public class Registro {
                         BD conexionBD = new BD();
                         conexionBD.conectar();
                         Statement stmt = conexionBD.crearConsulta();
-                        final String consulta = "insert into USUARIOS (USUARIO,PASSWORD,JEFE_TERRENO) VALUES('"+this.user+"','"+this.password+"',"+this.jefeTerreno+")";
+                        final String consulta = "insert into USUARIOS (USUARIO,PASSWORD,ES_HUMANO,JEFE_TERRENO) VALUES('"+this.user+"','"+this.password+"', true ,"+this.jefeTerreno+")";
                         stmt.executeUpdate(consulta);
                         return true;
                     }

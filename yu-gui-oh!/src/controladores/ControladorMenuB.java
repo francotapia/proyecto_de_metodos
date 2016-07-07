@@ -17,6 +17,7 @@ import javax.swing.JButton;
 public class ControladorMenuB implements ActionListener{
     
     private vistaMenuBatalla vmb;
+    private String usuario;
     
     public vistaMenuBatalla getvistaMenu(){
         return this.vmb;

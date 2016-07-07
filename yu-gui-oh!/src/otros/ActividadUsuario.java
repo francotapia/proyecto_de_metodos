@@ -10,6 +10,9 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -17,8 +20,11 @@ import java.io.PrintWriter;
  */
 //tiene metodo static, que es llamado despues de cada accion del usuario
 //crea un txt y agregar el print de la accion
-public class ActividadUsuario {
-    public static void actividadUsuario(String texto){
+public class ActividadUsuario{
+    public static void actividadUsuario(String actividad){
+        Date fecha = new Date();
+        DateFormat formatoHoraFecha = new SimpleDateFormat("yyyy/MM/dd :: HH:mm:ss =");
+        String actividadUsuario = formatoHoraFecha.format(fecha) + actividad;
         File ActividadUsuario = new File("log.txt");
             try{
                 if(ActividadUsuario.exists()==false){
@@ -26,7 +32,7 @@ public class ActividadUsuario {
                     ActividadUsuario.createNewFile();
                 }
                 PrintWriter salidaDeArchivo = new PrintWriter(new FileWriter(ActividadUsuario, true));
-                salidaDeArchivo.append(texto);
+                salidaDeArchivo.append(actividadUsuario);
                 salidaDeArchivo.append(System.lineSeparator());
                 salidaDeArchivo.close();
             }catch(IOException e){

@@ -7,9 +7,11 @@ package controladores;
 
 import java.awt.event.ActionEvent;
 import modelos.Jugador;
+import modelos.Turno;
 import vistas.vistaLogin;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import otros.ActividadUsuario;
 
 /**
  *
@@ -19,13 +21,19 @@ public class ControladorLogin implements ActionListener{
     
     vistaLogin vl;
     Jugador jug;
+    Turno turn;
+    
+    public Jugador getJugadorCL(){
+        return this.jug;
+    }
      //Se escucha a la vistaLogin
     public vistaLogin getvistaLogin(){
         return this.vl;
     }
     public ControladorLogin(){ //constructor login para inicializar vistas
-        this.jug = new Jugador("antonio", "andres", 1);
+        this.jug = new Jugador();
         this.vl = new vistaLogin();
+        this.turn = new Turno();
         this.verVista();
     }    
 
@@ -41,6 +49,7 @@ public class ControladorLogin implements ActionListener{
                 vl.bienvenida(usuario);
                 this.vl.setVisible(false);
                 ControladorMenu cm = new ControladorMenu(usuario);
+                ActividadUsuario.actividadUsuario("El usuario " + usuario + " inicio sesion");
             }
             else{
                 vl.errorContraseña(usuario);
@@ -59,6 +68,7 @@ public class ControladorLogin implements ActionListener{
              String usuario = vl.getUsuario();
              String contraseña = vl.getContraseña();
              verificar(usuario,contraseña); 
+             
              
         } 
         if(vl.getBoton2() == (JButton)e.getSource()){
